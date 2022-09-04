@@ -1,0 +1,76 @@
+[
+    {
+        "date": 2020,
+        "tech_description":"Progressive Web App",
+        "name":"Scanbage",
+        "logo_file":"logo_scanbage.png",
+        "short_description":"Scanbage è una piattaforma online con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti, esponendo le seguenti funzionalità: riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto; creazioni di case virtuali nelle quali, un gruppo di utenti, possa avere uno storico dei rifiuti gettati, il bidone corrispondente ad ogni rifiuto e delle statistiche per effettuare confronti tra utenti della stessa casa; elementi di gamification come: possibilità di acquisire premi, avanzamento nei livelli, visualizzazione di una classifica globale...",
+        "description": "<p>Scanbage è una piattaforma online nata con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti.</p>L'applicazione permette:<ul><li>il riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto</li><li>la creazione di abitazioni virtuali da parte degli utenti</li><li>la memorizzazione dello storico dei rifiuti gettati per singolo utente</li><li>di conoscere l'informazione relativa alla colorazione dei bidoni a seconda della provincia in cui si trova</li><li>la consultazione di statistiche per effetture confronti tra gli utenti della casa</li></ul>sono introdotti inoltre elementi di gamification come:<ul><li>possibilità di acquisire premi</li><li>avanzamento nei livelli con video di sensibilizzazione ogni volta che si supera un nuovo livello</li><li>visualizzazione di una classifica globale</li></ul> <br> <p> 📄 Nel settembre 2021 il progetto è stato oggetto di una pubblicazione presentata a Roma alla conferenza GoodIT '21: Proceedings of the Conference on Information Technology for Social Good. La pubblicazione è disponibile al link <a href=\"https://dl.acm.org/doi/10.1145/3462203.3477056\">https://dl.acm.org/doi/10.1145/3462203.3477056</a></p>",
+        "pdf":"scanbage.pdf",
+        "techs":[
+            "Vue",
+            "Vuetify",
+            "Javascript",
+            "Node",
+            "Mongodb",
+            "express"
+        ],
+        "github":"https://gitlab.com/gianluca.aguzzi/asw-19-project",
+        "screenshots":[
+            "scanbage-pic1.png",
+            "scanbage-pic2.png",
+            "scanbage-pic3.png",
+            "scanbage-pic4.png",
+            "scanbage-pic5.png"
+        ]
+    },
+    {
+        "date": 2020,
+        "name":"IntelliSerra",
+        "tech_description":"Scala framework",
+        "logo_file":"logo_iserra.png",
+        "description":"",
+        "pdf":"intelliserra.pdf",
+        "techs":[
+            "Scala",
+            "Akka",
+            "Prolog"
+        ],
+        "github":"https://github.com/moneletizi94/IntelliSerra",
+        "screenshots":["intelliserra.png","intelliserra2.png"]
+    },
+    {
+        "date": 2020,
+        "tech_description":"Big data, Spark, Hadoop",
+        "name":"COVID papers analysis",
+        "logo_file":"logo_covid_paper_analysis.png",
+        "short_description":"Progetto del corso di Big Data. Analisi di paper inerenti al COVID volta all'estrazione di parole chiave e all'individuazione di autori particolarmente attivi sulle riviste proposte.",
+        "description":"<p>Progetto del corso di Big Data. Analisi di paper inerenti al COVID volta all'estrazione di parole chiave.</p>",
+        "pdf":"covid_papers_analysis.pdf",
+        "techs":[
+            "Spark",
+            "Scala",
+            "Hadoop",
+            "Tableau"
+        ],
+        "github":"https://gitlab.com/moneletizi/covid-papers-analysis",
+        "screenshots":[]
+    },
+    {
+        "date": 2018,
+        "tech_description":"Android app",
+        "name":"FUORICLASSE",
+        "logo_file":"logo_fuoriclasse.png",
+        "short_description":"L’applicazione FuoriClasse è legata al settore scolastico e ha l’obiettivo principale di migliorare l’efficienza delle comunicazioni tra studenti e docenti accompagnatori di una gita scolastica.",
+        "description":"<p>L’applicazione FuoriClasse è legata al settore scolastico e ha l’obiettivo principale di migliorare l’efficienza delle comunicazioni tra studenti e docenti accompagnatori di una gita scolastica.</p>",
+        "pdf":"fuoriclasse.pdf",
+        "techs":[
+            "Android",
+            "SQL",
+            "Java",
+            "Spring"
+        ],
+        "github":"",
+        "screenshots":[]
+    }
+]

@@ -1,0 +1,131 @@
+BasicInfo:
+  FirstName: Simone
+  LastName: Letizi
+  Photo: img/avatar.jpg
+  Contacts:
+    - Icon: fas fa-phone
+      Info: +39 3921695488
+      LinkTo: 'tel:+39 3921695488'
+    - Icon: fas fa-envelope
+      Info: s.letizi@gmail.com
+      LinkTo: 'mailto:+39 3921695488'
+    - Icon: fas fa-globe
+      Info: www.simoneletizi.com
+      LinkTo: //www.simoneletizi.com
+    - Icon: fas fa-map-marker-alt
+      Info: Fano (PU), IT
+      LinkTo: ''
+
+Profile: Dopo aver conseguito la laurea triennale in Ingegneria Informatica, con l’avvento dell’Intelligenza Artificiale ho basato il mio percorso di studi magistrale sulla Data Science e Data Engineering. Da qualche anno nutro un forte interesse verso la didattica perché trovo stimolante e avvincente prendersi cura con passione della formazione di coloro che saranno la nuova generazione di innovatori, oltre che cittadini del mondo. L’informatica è una meta-competenza e il suo studio diventa uno strumento concettuale e pratico per creare, ragionare e apprendere dinamiche che caratterizzano la maggior parte dei domini reali.
+
+Experience:
+  - Employer: Università di Bologna
+    Place: 
+    Positions:
+      - Title: Docente senior 
+        Date: Giu 2021 - Lug 2021
+        Details: 
+          - Summer camp 'Ragazze digitali' orientato allo sviluppo di app Android per mezzo di programmazione a blocchi (Kodular). Introduzione ai concetti fondamentali di AI e creazione di semplici modelli di Machine Learning con lo strumento di Google Teachable Machine. Docente senior responsabile della programmazione didattica, della preparazione del materiale didattico e dello svolgimento delle lezioni in laboratorio
+        Badges: ['Public speaking', 'Programmazione a blocchi']
+  - Employer: Istituto Bramante Genga
+    Place: Pesaro, PU
+    Positions:
+      - Title: Progetto PON - coding lab
+        Date: Mar 2021 - Apr 2021
+        Details:
+          - Corso di coding orientato allo sviluppo di app Android per mezzo di programmazione a blocchi attraverso la piattaforma AppInventor. Docente senior responsabile della programmazione didattica, della preparazione del materiale didattico e dello svolgimento delle lezioni in laboratorio
+        Badges: ['Public speaking', 'Programmazione a blocchi']
+  - Employer: Data Reply IT
+    Place: Bologna
+    Positions:
+      - Title: Stagista - Data Science
+        Date: Ott 2020 - Mar 2021
+        Details:
+          - Tecniche di log analsys real-time per l'identificazione di anomalie
+          - Modelli basati sul Deep Learning
+        Badges: ['Python', 'Tensorflow', 'Data Processing', 'Docker']
+  - Employer: Università di Bologna
+    Place: Cesena
+    Positions:
+      - Title: Tutor didattico 
+        Date: Feb 2019 
+        Details:
+          - Tutor didattico del corso programmazione di sistemi mobile offerto dall'Università di Bologna presso il polo di Cesena
+          - Lezioni di laboratorio con svolgimento di lezioni frontali 
+          - Preparazione del materiale didattico
+        Badges: ['Android']
+  - Employer: Centro studi Manzoni
+    Place: Fano
+    Positions:
+      - Title: Docente di informatica classi quarte e quinte 
+        Date: Ott 2018 - Lug 2019
+        Badges: []
+  - Employer: Computer sistemi
+    Place: Fano
+    Positions:
+      - Title: Stagista - programmatore Android
+        Date: Feb 2017 
+        Details:
+        Badges: ['Android']
+
+Education:
+  - Course: Laurea magistrale in Ingegneria e Scienze Informatiche
+    Place: Università di Bologna - sede di Cesena
+    Date: Sep 2018 - Mar 2021
+    Details: votazione - 110L
+  - Course: Percorso formativo 24 CFU - Antropo-psico-pedagogico e nelle metodologie e tecnologie didattiche
+    Place: Università di Bologna
+    Date: Lug 2020
+    Details: 
+  - Course: Laurea triennale in Ingegneria e Scienze Informatiche
+    Place: Università di Bologna - sede di Cesena
+    Date: Sep 2013 - Lug 2018
+    Details: votazione - 100/110
+  - Course: Diploma di ragioniere perito programmatore
+    Place: ITC Cesare Battisti Fano
+    Date: Sep 2008 - Lug 2013
+    Details: votazione - 98/100
+
+Skills:
+  - Family: Programming
+    Items:
+      - Python
+      - Scala
+      - HTML 
+      - Javascript
+      - CSS
+      - Java
+      - SQL
+      - C
+  - Family: Frameworks
+    Items:
+      - Vue
+      - Akka
+      - Flask
+      - Hugo
+      - Tensorflow
+      - Keras
+  - Family: Developer Tools
+    Items:
+      - Git
+      - Docker
+      - Kubernetes
+  - Family: Misc
+    Items:
+      - Adobe Tools
+      - LaTeX
+      - Tableau
+
+Languages:
+  - Name: Italiano 🇮🇹
+    Level: Nativo
+  - Name: Inglese 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+    Level: B2
+
+Diplomas:
+  - Tableau Training for Data Science (2021) - Udemy
+
+Interests:
+  - Educazione
+  - Data Science
+  - Sport

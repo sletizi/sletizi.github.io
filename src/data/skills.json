@@ -1,0 +1,83 @@
+[
+    {
+        "name": "API",
+        "images": "theory.png",
+        "category": "COMPUTER SCIENCE FUNDAMENTALS",
+        "status": "DONE ✅",
+        "perc_level": 100
+    },
+    {
+        "name": "Git",
+        "images": "theory.png",
+        "category": "COMPUTER SCIENCE FUNDAMENTALS",
+        "status": "DONE ✅",
+        "perc_level": 90
+    },
+    {
+        "name": "DB Fundamentals (Normalization, ACID)",
+        "images": "theory.png",
+        "category": "DB",
+        "status": "DONE ✅",
+        "perc_level": 100
+    },
+    {
+        "name": "CAP THEOREM",
+        "images": "theory.png",
+        "category": "DB",
+        "status": "DONE ✅",
+        "perc_level": 100
+    },
+    {
+        "name": "OLAP vs OLTP",
+        "images": "theory.png",
+        "category": "DB",
+        "status": "DONE ✅",
+        "perc_level": 100
+    },
+    {
+        "name": "HORIZONTAL VS VERTICAL SCALING",
+        "images": "theory.png",
+        "category": "DB",
+        "status": "DONE ✅",
+        "perc_level": 100
+    },
+    {
+    "name": "Spark",
+    "images": "spark.png",
+    "category": "BIG DATA",
+    "status": "DONE ✅",
+    "perc_level": 80
+    },
+    
+    
+    
+    
+    {
+      "name": "Spark",
+      "images": "spark.png",
+      "category": "BIG DATA",
+      "status": "DONE ✅",
+      "perc_level": 80
+    },
+    {
+      "name": "Docker",
+      "images": "docker.jpg",
+      "category": "DEPLOY",
+      "status": "NICE TO HAVE 🔜",
+      "perc_level": 60
+    },
+    {
+      "name": "Python",
+      "images": "python.png",
+      "category": "PROGRAMMING LANGUAGES",
+      "status": "WORKING ON 👨🏻‍💻",
+      "perc_level": 70
+    },
+    {
+      "name": "Scala",
+      "images": "scala.jpg",
+      "category": "PROGRAMMING LANGUAGES",
+      "status": "TO DO ❌",
+      "perc_level": 70
+    }
+  ]
