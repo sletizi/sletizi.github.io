@@ -1,0 +1,56 @@
+[
+    {
+        "from": "6-2021",
+        "title": "Docente senior progetto Ragazze digitali - percorso 'Inventa la tua app con Kodular'",
+        "description":"Ideazione del programma, preparazione del materiale didattico e spiegazione durante le lezioni ",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "3-2021",
+        "title": "Esperto esterno - progetto PON coding lab - Istituto Bramante Genga",
+        "description":"Ideazione del programma, preparazione del materiale didattico e spiegazione durante le lezioni ",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "2-2021",
+        "title": "Laurea magistrale",
+        "description":"<b>Laurea magistrale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 110 e lode. <br> I miei studi si sono concentrati principalmente nell'analisi di grandi quantità di dati, aziendali e non. (Business Intelligence, Big Data, Data mining, Text Mining)",
+        "color" : "#BFA89E"
+    },
+    {
+        "from": "09-2020",
+        "title": "Stage",
+        "description":"Data scientist presso <b>Data Reply s.r.l.</b>",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "01-2019",
+        "title": "Lavoro",
+        "description":"<b>Tutor didattico</b> di laboratorio con svolgimento di lezioni frontali nel corso di <b>Programmazione di sistemi mobile</b> offerto dall'<b>Università di Bologna</b> presso il polo di Cesena",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "06-2018",
+        "title": "Laurea triennale",
+        "description":"<b>Laurea triennale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 100/110",
+        "color" : "#BFA89E"
+    },
+    {
+        "from": "09-2018",
+        "title": "Lavoro - Docente",
+        "description": "<b>Docente di Informatica</b> presso l'istituto Centro Studi Manzoni di Fano.",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "01-2017",
+        "title": "Stage",
+        "description":"<b>Stage</b> con mansioni di programmatore Android presso <b>Computer Sistemi s.r.l.</b>",
+        "color" : "#B1CFEB"
+    },
+    {
+        "from": "07-2013",
+        "title": "Diploma",
+        "description":"<b>Diploma di maturità in Ragioneria Perito Commerciale e Programmatore</b>\n Votazione: 98/100",
+        "color": "#BFA89E"
+    }
+]

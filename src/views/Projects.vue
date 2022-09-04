@@ -1,0 +1,130 @@
+<template>
+  <v-main>
+    <v-tabs
+        background-color="secondary"
+        fixed-tabs
+        dark
+        next-icon="mdi-arrow-right-bold-box-outline"
+        prev-icon="mdi-arrow-left-bold-box-utline"
+        show-arrows
+        v-model="selectedTab"
+    >
+        <v-tab v-for="name in projects_name()" :key="name">
+            {{ name }}
+        </v-tab>
+    </v-tabs>
+    <v-row align="center" justify="center">
+      <v-col align="center" cols="12"
+              md="6">
+          <h1 class="text-center"> {{ selectedProject.name }} </h1>
+          <v-btn
+          class="text-center ma-4"
+          :href="selectedProject.github"          
+          icon>
+          <v-icon size="40px"> mdi-github </v-icon>
+        </v-btn>
+      </v-col>
+      <v-col align="center" cols="12"
+              md="6">
+        <v-avatar
+        size="170"
+        radius="10px">  
+            <v-img
+                contain
+                :src="require(`../assets/projects_logos/${selectedProject.logo_file}`)" 
+                class="white--text align-end"
+            />
+        </v-avatar>    
+      </v-col>
+      
+  </v-row>
+    <p class="ma-4 pa-4"> <span v-html="selectedProject.description"></span></p>
+  <v-row align="center" justify="center">
+    <v-btn
+        small
+        v-for="tech in selectedProject.techs"
+        :key=tech
+        rounded
+        color="primary"
+        class="ma-1"
+        dark>
+        {{tech}}
+    </v-btn>
+  </v-row>
+  <v-row align="center" justify="center" class="ma-8" v-if="hasScreen">
+    <v-carousel hide-delimiters cycle >
+      <v-carousel-item
+        contain     
+        v-for="images in selectedProject.screenshots"
+        :key="images"
+        :src="require(`../assets/projects_screen/${images}`)"
+      ></v-carousel-item>
+    </v-carousel>
+  </v-row>
+  <h2 class="text-center ma-4"> Report </h2>
+  <div>
+    <v-text-field
+          style="width:7em; margin:auto"
+          v-model.number="page"
+          type="number"
+          label="Numero pagina"
+          min="1"
+          :max="numPages"
+    ></v-text-field> 
+  </div>
+  <div style="width:70%; margin:auto; margin-bottom:10px; border: 3px solid black ">
+      <div v-if="loadedRatio > 0 && loadedRatio < 1" style="background-color: green; color: white; text-align: center" :style="{ width: loadedRatio * 100 + '%' }">{{ Math.floor(loadedRatio * 100) }}%</div>
+      <pdf v-if="selectedProject.pdf != ''" 
+            ref="pdf" 
+            :src="require(`../assets/projects_pdf/${ selectedProject.pdf }`)"
+            :page="page" 
+            @progress="loadedRatio = $event" 
+            @error="error" 
+            @num-pages="numPages = $event" 
+            @link-clicked="page = $event"></pdf>
+  </div>
+  </v-main> 
+</template>
+
+<script>
+import projectsData from '@/data/projects.json'
+import pdf from 'vue-pdf'
+
+export default {
+    methods: {
+        error: function(err){
+          console.log(err)
+        },
+        projects_name: function () {
+          return projectsData.map(p => p.name)
+        },
+        getProjectByIndex: function (index) {
+          return projectsData[index]
+        }
+    },
+    data: function() {
+        return {
+            selectedTab: 0,
+            loadedRatio: 0,
+            page: 1,
+            numPages: 0
+        }
+    },
+    computed: {
+      selectedProject: function () {
+        return this.getProjectByIndex(this.selectedTab)
+      },
+      hasScreen: function () {
+        return this.getProjectByIndex(this.selectedTab).screenshots.length > 0
+      }
+    },
+    watch: {
+      selectedTab: function () {
+        this.page = 1; //when seleted tag changed set pdf on page 1
+      },
+    },
+    components: {
+      pdf
+    }
+};
+</script>

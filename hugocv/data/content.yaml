@@ -1,0 +1,151 @@
+BasicInfo:
+  FirstName: Simone
+  LastName: Letizi
+  Photo: img/avatar.jpg
+  Contacts:
+    - Icon: fas fa-phone
+      Info: +39 3921695488
+      LinkTo: 'tel:+39 3921695488'
+    - Icon: fas fa-envelope
+      Info: s.letizi@gmail.com
+      LinkTo: 'mailto:+39 3921695488'
+    - Icon: fas fa-globe
+      Info: www.simoneletizi.com
+      LinkTo: //www.simoneletizi.com
+    - Icon: fas fa-map-marker-alt
+      Info: Fano (PU), IT
+      LinkTo: ''
+
+Profile: Master's degree student passionate about teaching and excited for everything related to data in its various forms (Data Science - Data Engineering - BI). Data is evidence, and evidence fights ignorance and bias, as well as explaining most real-world dynamics. I have a strong interest in education because it is inspiring and compelling to passionately care about and be responsible for people who will be the next generation of innovators, as well as citizens of the world. Computer science is a meta-skill; its study becomes a conceptual and practical tool for creating, reasoning and learning about the dynamics that characterize most real-world domains.
+
+
+Experience:
+  - Employer: Iconsulting S.p.A.
+    Place: Bologna (Remote)
+    Positions:
+      - Title: Data Engineer
+        Date: Nov 2021 - Now
+        Details: 
+        Badges: ['BI', 'Data viz']
+  - Employer: Liceo scientifico Fulcieri
+    Place: Forlì
+    Positions:
+      - Title: Senior teacher
+        Date: Sep 2021 - Oct 2021
+        Details: 
+          - introduction of AI base concepts and block-based visual programming. 
+        Badges: ['Public speaking', 'Block-based visual programming']
+  - Employer: Ragazze digitali - Unibo/UniMore
+    Place: Cesena (DAD)
+    Positions:
+      - Title: Senior teacher
+        Date: Jun 2021 - Jul 2021
+        Details: 
+          - I was the lead teacher of a 48h course aimed at sixteen to eighteen female students, based on the introduction of AI base concepts and block-based visual programming. More in detail, I was in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.
+        Badges: ['Public speaking', 'Block-based visual programming']
+  - Employer: Istituto Bramante Genga
+    Place: Pesaro
+    Positions:
+      - Title: PON project - coding lab
+        Date: Mar 2021 - Apr 2021
+        Details:
+          - Lead teacher of a 30h coding course based on Android development through block-based programming (AppInventor). Senior teacher in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.        
+        Badges: ['Public speaking', 'Block-based programming']
+  - Employer: Data Reply IT
+    Place: Bologna (Remote)
+    Positions:
+      - Title: Intern - Data Science
+        Date: Oct 2020 - Mar 2021
+        Details:
+          - Log analysis techniques for log anomaly detection task
+          - Deep learning models
+        Badges: ['Python', 'Tensorflow', 'Data Processing', 'Docker']
+  - Employer: Università di Bologna
+    Place: Cesena
+    Positions:
+      - Title: Teaching assistant - lab tutor 
+        Date: Feb 2019 
+        Details:
+          - Teaching assistant in bachelor course “Mobile application development” offered by Unibo in Cesena polo
+          - Lab lessons and lectures
+          - Preparation of educational material
+        Badges: ['Android']
+  - Employer: Centro studi Manzoni
+    Place: Fano
+    Positions:
+      - Title: It teacher 
+        Date: Oct 2018 - Jul 2019
+        Badges: []
+  - Employer: Computer sistemi
+    Place: Fano
+    Positions:
+      - Title: Intern - Android developer
+        Date: Feb 2017 
+        Details:
+        Badges: ['Android']
+
+Education:
+  - Course: Master degree in computer science and engineering
+    Place: Università di Bologna - sede di Cesena
+    Date: Sep 2018 - Mar 2021
+    Details: final grade - 110L
+  - Course: Percorso formativo 24 CFU - Antropo-psico-pedagogico e nelle metodologie e tecnologie didattiche
+    Place: Università di Bologna
+    Date: Jul 2020
+    Details: 
+  - Course: Bachelor degree in computer science and engineering
+    Place: Università di Bologna - sede di Cesena
+    Date: Sep 2013 - Jul 2018
+    Details: final grade - 100/110
+  - Course: Diploma as Accountant and Programmer
+    Place: ITC Cesare Battisti Fano
+    Date: Sep 2008 - Jul 2013
+    Details: final grade - 98/100
+
+Skills:
+  - Family: Programming
+    Items:
+      - Python
+      - Scala
+      - HTML 
+      - Javascript
+      - CSS
+      - Java
+      - SQL
+      - C
+  - Family: Frameworks
+    Items:
+      - Vue
+      - Akka
+      - Flask
+      - Hugo
+      - Tensorflow
+      - Keras
+  - Family: Developer Tools
+    Items:
+      - Git
+      - Docker
+      - Kubernetes
+      - Tableau
+      - PowerBI
+
+Languages:
+  - Name: Italiano 🇮🇹
+    Level: Native
+  - Name: Inglese 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+    Level: B2
+
+Diplomas:
+  - Tableau Training for Data Science (Jul 2021) - Udemy
+  - AWS Certified Cloud Practitioner (Oct 2021) - AWS
+
+Interests:
+  - Education
+  - Data science
+  - Sport
+
+Publications:
+  - Title: Encouraging users in waste sorting using deep neural networks and gamification
+    Publisher: Association of Computer Machinery
+    Date: Sep 2021
+    Link: https://dl.acm.org/doi/10.1145/3462203.3477056
