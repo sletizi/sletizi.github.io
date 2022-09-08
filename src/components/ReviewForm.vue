@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import { db } from '@/firebase.js'
+//import { db } from '@/firebase.js'
 import emailjs from 'emailjs-com';
 import{ init } from 'emailjs-com';
 init("user_W1xuBXOG6uvh8w9gWGUZd");
@@ -131,7 +131,7 @@ export default {
     }),
     methods: { 
         addReview: function() {
-            const createdAt = new Date()
+            /*const createdAt = new Date()
             db.collection('reviews').add({
                 "title":this.title,
                 "ReviewerName":this.reviewerName, 
@@ -148,7 +148,7 @@ export default {
                 console.error("Error adding document: ", error);
             });
             this.dialog = false
-            this.sendEmail()
+            this.sendEmail()*/ return null
         },
         sendEmail: function() {
           emailjs.send('service_mrw2c1h', 'template_kh20tqp', {})
