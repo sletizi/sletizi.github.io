@@ -30,7 +30,7 @@
 <script>
 //import ReviewForm from './ReviewForm.vue'
 import ReviewCard from './ReviewCard.vue'
-import { db } from '@/firebase.js'
+//import { db } from '@/firebase.js'
 
 export default {
   created () {
@@ -38,15 +38,15 @@ export default {
   },
   methods: { 
       readReviews: function() {
-        db.collection('reviews').where("approved","==",true).orderBy('createdAt').get().then(snap => {
+        /*db.collection('reviews').where("approved","==",true).orderBy('createdAt').get().then(snap => {
           snap.forEach(element => {
             this.reviews.push(element.data())
           });
-        })
+        })*/return null
       }
   },
   firestore: {
-    reviews: db.collection('reviews').where("approved","==",true).orderBy('createdAt')
+    reviews: null//db.collection('reviews').where("approved","==",true).orderBy('createdAt')
   },
   data() {
     return {
