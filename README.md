@@ -14,8 +14,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Deploy on firebase
-```
-firebase deploy
-```
