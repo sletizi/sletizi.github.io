@@ -11,7 +11,8 @@
         "build-dev-hugo": "rm -rf ../public/cv/ & env-cmd -e development --use-shell \"cd hugocv && hugo -D -d ../public/cv/\"",
         "build-github-hugo": "rm -rf ../public/cv/ & env-cmd -e production --use-shell \"cd hugocv && hugo -D -d ../public/cv/\"",
         "start": "node server.js",
-        "lint": "vue-cli-service lint"
+        "lint": "vue-cli-service lint",
+        "deploy": "npm run build && cd ./dist && cp index.html 404.html"
     },
     "dependencies": {
         "@codersrank/summary": "^0.9.11",
