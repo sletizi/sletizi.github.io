@@ -11,7 +11,7 @@ console.log(process.env.BASE_URL);
 
 export default new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: process.env.VUE_APP_BASE_URL,
   routes: [
     {
       path: "/",
