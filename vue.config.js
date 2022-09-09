@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/sletizi.github.io/" : "/",
+  publicPath: "/",
   chainWebpack: config => {
     config.module
       .rule('vue')
