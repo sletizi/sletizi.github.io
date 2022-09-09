@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 
 
 export default new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.VUE_APP_BASE_URL,
   routes: [
     {
