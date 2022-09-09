@@ -7,6 +7,8 @@ import Projects from "./views/Projects.vue"
 
 Vue.use(VueRouter);
 
+console.log(process.env.BASE_URL);
+
 export default new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
