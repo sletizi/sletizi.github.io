@@ -10,8 +10,8 @@ BasicInfo:
       Info: s.letizi@gmail.com
       LinkTo: 'mailto:+39 3921695488'
     - Icon: fas fa-globe
-      Info: www.simoneletizi.com
-      LinkTo: //www.simoneletizi.com
+      Info: sletizi.github.io/
+      LinkTo: sletizi.github.io
     - Icon: fas fa-map-marker-alt
       Info: Fano (PU), IT
       LinkTo: ''
@@ -21,7 +21,7 @@ Profile: Master's degree student passionate about teaching and excited for every
 
 Experience:
   - Employer: Iconsulting S.p.A.
-    Place: Bologna (Remote)
+    Place: Casalecchio di Reno (Remote)
     Positions:
       - Title: Data Engineer
         Date: Nov 2021 - Now
