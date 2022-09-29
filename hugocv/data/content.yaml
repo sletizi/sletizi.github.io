@@ -10,8 +10,8 @@ BasicInfo:
       Info: s.letizi@gmail.com
       LinkTo: 'mailto:+39 3921695488'
     - Icon: fas fa-globe
-      Info: sletizi.github.io/
-      LinkTo: sletizi.github.io
+      Info: sletizi.github.io
+      LinkTo: https://sletizi.github.io/
     - Icon: fas fa-map-marker-alt
       Info: Fano (PU), IT
       LinkTo: ''
