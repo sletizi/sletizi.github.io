@@ -26,7 +26,8 @@ Experience:
       - Title: Data Engineer
         Date: Nov 2021 - Now
         Details: 
-        Badges: ['BI', 'Data viz']
+          - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
+        Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
   - Employer: Liceo scientifico Fulcieri
     Place: Forlì
     Positions:
