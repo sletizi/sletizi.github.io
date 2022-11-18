@@ -56,7 +56,7 @@ export default {
             experiences : [
         {
             from: new Date(2021,10),
-            title: "Data Engineer - Iconsulting S.p.A.",
+            title: "Business Analytics Specialist - Iconsulting S.p.A.",
             description:"Realizzazione di flussi ETL per l'alimentazione di dashboard analitiche realizzate in Microsoft PowerBI",
             color : "#B1CFEB"
         },
