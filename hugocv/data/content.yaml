@@ -23,15 +23,16 @@ Experience:
   - Employer: Iconsulting S.p.A.
     Place: Casalecchio di Reno (Remote)
     Positions:
-      - Title: Data Engineer
+      - Title: Business Analytics Specialist
         Date: Nov 2021 - Now
         Details: 
           - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
+          - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
         Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
   - Employer: Liceo scientifico Fulcieri
     Place: Forlì
     Positions:
-      - Title: Senior teacher
+      - Title: Teacher
         Date: Sep 2021 - Oct 2021
         Details: 
           - introduction of AI base concepts and block-based visual programming. 
@@ -39,7 +40,7 @@ Experience:
   - Employer: Ragazze digitali - Unibo/UniMore
     Place: Cesena (DAD)
     Positions:
-      - Title: Senior teacher
+      - Title: Teacher
         Date: Jun 2021 - Jul 2021
         Details: 
           - I was the lead teacher of a 48h course aimed at sixteen to eighteen female students, based on the introduction of AI base concepts and block-based visual programming. More in detail, I was in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.

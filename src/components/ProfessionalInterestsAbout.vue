@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">INTERESSI PROFESSIONALI<!--PROFESSIONAL INTERESTS --></h2>
+    <h2 class="display-2 font-weight-bold mb-3 mr-7 ml-7 text-uppercase text-center">INTERESSI PROFESSIONALI<!--PROFESSIONAL INTERESTS --></h2>
 
     <v-responsive
       class="mx-auto mb-12"
@@ -76,7 +76,7 @@ export default {
             {
                 name: 'Insegnamento',
                 quote_it: "Al bambino noi non possiamo consegnare l'oceano, un secchiello alla volta, pero' gli possiamo insegnare a nuotare nell'oceano e allora andra' fin dove le sue forze lo porteranno, poi inventera' una barca e navighera' con la barca, poi con la nave. Dobbiamo cioe' consegnare degli strumenti culturali.La conoscenza non e' una quantita', e' una ricerca. Non dobbiamo dare ai bambini delle quantita' di sapere, ma degli strumenti per ricercare, degli strumenti culturali perche' lui crei, spinga la sua ricerca fin dove puo'; poi certamente tocchera' sempre a noi spingere piu' in la' e aiutarlo a affinare i suoi strumenti. <br> (Gianni Rodari)",
-                color:'#0A0C0C'
+                color:'#d4d9d2'
             },
             {
                 name: 'Intelligenza Artificiale',
@@ -86,7 +86,7 @@ export default {
             {
                 name: 'Insegnamento',
                 quote_it: "S'impara soltanto divertendosi. L'arte di insegnare non è altro che l'arte di svegliare la curiosità delle anime giovani per poi soddisfarla, e la curiosità vive solo nelle anime felici. Le cognizioni fatte entrare per forza nella mente la occludono e la soffocano. Per dirigere il sapere bisogna averlo divorato con appetito. <br> (Anatole France)",
-                color:'#0A0C0C'
+                color:'#d4d9d2'
             }]
         }
     }
