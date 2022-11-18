@@ -12,13 +12,11 @@
             </v-responsive>
 
             <v-responsive
-                class="mx-auto title font-weight-light mb-8"
-                max-width="720"
+                class="mr-6 ml-6 title font-weight-light mb-8"
             >
-                Dopo aver conseguito la laurea triennale in Ingegneria Informatica, con l’avvento dell’Intelligenza Artificiale ho basato il mio percorso di studi magistrale sulla Data Science e Data Engineering.
+                Data Enthusiast e grande sostenitore della frase "Without data you're jusy another person with an opinion".
                 Da qualche anno nutro un forte interesse verso la didattica perché trovo stimolante e avvincente prendersi cura con passione della formazione di coloro che saranno la nuova generazione di innovatori, oltre che cittadini del mondo.
                 Ritengo che il sistema scolastico giochi un ruolo fondamentale soprattutto nello stimolare l’interesse degli studenti verso le discipline informatiche, i cui strumenti permeano la vita quotidiana.
-                Tuttavia, oltre ad essere presente sempre di più nella vita di ognuno di noi, l’informatica è una meta-competenza e il suo studio diventa uno strumento concettuale e pratico per creare, ragionare e apprendere dinamiche che caratterizzano la maggior parte dei domini reali.
             </v-responsive>
 
             <v-avatar
