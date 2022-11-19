@@ -16,7 +16,7 @@
     <v-row align="center" justify="center">
       <v-col align="center" cols="12" md="6">
         <h1 class="text-center">{{ selectedProject.name }}</h1>
-        <v-btn class="text-center ma-4" :href="selectedProject.github" icon>
+        <v-btn class="text-center ma-3" :href="selectedProject.github" icon>
           <v-icon size="40px"> mdi-github </v-icon>
         </v-btn>
       </v-col>
@@ -33,7 +33,7 @@
       </v-col>
     </v-row>
     <p class="ma-4 pa-4"><span v-html="selectedProject.description"></span></p>
-    <v-row align="center" justify="center">
+    <v-row align="center" justify="center" class="ma-3">
       <v-btn
         small
         v-for="tech in selectedProject.techs"
@@ -47,7 +47,7 @@
       </v-btn>
     </v-row>
     <v-row align="center" justify="center" class="ma-2" v-if="hasScreen">
-      <v-carousel hide-delimiters cycle>
+      <v-carousel height="auto" hide-delimiters cycle>
         <v-carousel-item
           contain
           v-for="images in selectedProject.screenshots"
