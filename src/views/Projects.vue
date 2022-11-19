@@ -46,7 +46,7 @@
         {{ tech }}
       </v-btn>
     </v-row>
-    <v-row align="center" justify="center" class="ma-8" v-if="hasScreen">
+    <v-row align="center" justify="center" class="ma-2" v-if="hasScreen">
       <v-carousel hide-delimiters cycle>
         <v-carousel-item
           contain
@@ -89,19 +89,19 @@
       
     </v-row>
     <v-row align="center" justify="center" class="mb-4 ml-3 mr-3">
-      <v-btn small class="text-center ma-4" @click="page = page -1">
+      <v-btn small class="text-center ma-4" @click="page = page -1" :disabled="page<=1">
           -
         </v-btn>
         <v-text-field
           v-model.number="page"
-          width="500px"
+          width="400px"
           type="number"
           label="Numero pagina"
           min="1"
           :max="numPages"
-          class="shrink"
+          style="maxWidth: 700px"
     ></v-text-field> 
-        <v-btn small class="text-center ma-4"  @click="page = page  + 1">
+        <v-btn small class="text-center ma-4"  @click="page = page  + 1" :disabled="page >= numPages">
           +
         </v-btn>
 
