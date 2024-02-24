@@ -74,16 +74,15 @@
           >
             {{ Math.floor(loadedRatio * 100) }}%
           </div>
-          <pdf
+          <vue-pdf-embed
             v-if="selectedProject.pdf != ''"
             ref="pdf"
             :src="require(`../assets/projects_pdf/${selectedProject.pdf}`)"
             :page="page"
             @progress="loadedRatio = $event"
-            @error="error"
             @num-pages="numPages = $event"
             @link-clicked="page = $event"
-          ></pdf>
+          ></vue-pdf-embed>
         </div>
       </v-col>
       
@@ -111,9 +110,12 @@
 
 <script>
 import projectsData from "@/data/projects.json";
-import pdf from "vue-pdf";
+import VuePdfEmbed from 'vue-pdf-embed'
 
 export default {
+  components: {
+    VuePdfEmbed,
+  },
   methods: {
     error: function (err) {
       console.log(err);

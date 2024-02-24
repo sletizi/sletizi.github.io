@@ -33,7 +33,6 @@
       </section>
         <section>
           <div class="py-12"></div>
-          <reviews/>
             <div class="py-12"></div>
       </section>        
              
@@ -46,7 +45,6 @@ import HomeInfographicBar from '../components/HomeInfographicBar'
 import ProfessionalInterests from '../components/ProfessionalInterestHome'
 import Parallax from '../components/ParallaxScrollImage'
 import ProjectsSection from '../components/ProjectsHomeSection'
-import ReviewsSection from '../components/ReviewsSection'
 
 export default {
     components:{
@@ -55,7 +53,6 @@ export default {
         'professional-interests' : ProfessionalInterests,
         'parallax' : Parallax,
         'projects' : ProjectsSection,
-        'reviews' : ReviewsSection
     }
 }
 </script>
