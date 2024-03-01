@@ -75,13 +75,13 @@
             {{ Math.floor(loadedRatio * 100) }}%
           </div>
           <vue-pdf-embed
-            v-if="selectedProject.pdf != ''"
-            ref="pdf"
-            :src="require(`../assets/projects_pdf/${selectedProject.pdf}`)"
+          ref="pdfRef"
+
+            :source="`data:application/pdf;base64,${selectedProject.base64PDF}`"
             :page="page"
             @progress="loadedRatio = $event"
-            @num-pages="numPages = $event"
             @link-clicked="page = $event"
+            @rendered="handleDocumentRender"
           ></vue-pdf-embed>
         </div>
       </v-col>
@@ -92,9 +92,8 @@
           -
         </v-btn>
         <v-text-field
-          v-model.number="page"
+          :value="`${page} di ${numPages}`"
           width="400px"
-          type="number"
           label="Numero pagina"
           min="1"
           :max="numPages"
@@ -110,13 +109,17 @@
 
 <script>
 import projectsData from "@/data/projects.json";
-import VuePdfEmbed from 'vue-pdf-embed'
+import VuePdfEmbed from 'vue-pdf-embed/dist/vue2-pdf-embed'
 
 export default {
   components: {
     VuePdfEmbed,
   },
   methods: {
+    handleDocumentRender() {
+      this.isLoading = false
+      this.numPages = this.$refs.pdfRef.pageCount
+    },
     error: function (err) {
       console.log(err);
     },
@@ -132,7 +135,7 @@ export default {
       selectedTab: 0,
       loadedRatio: 0,
       page: 1,
-      numPages: 0,
+      numPages: 1,
     };
   },
   computed: {
@@ -147,9 +150,6 @@ export default {
     selectedTab: function () {
       this.page = 1; //when seleted tag changed set pdf on page 1
     },
-  },
-  components: {
-    pdf,
-  },
+  }
 };
 </script>
