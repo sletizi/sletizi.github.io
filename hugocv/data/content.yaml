@@ -30,13 +30,13 @@ Experience:
       - Title: Senior BI & Data Engineer Consultant
         Date: May 2023 - Now
         Details: 
-          The project’s scope is to support the client's CDMO department in the creation of a unique reporting environment to provide different business levels with the ability to monitor their performances at a glance, and the board level to easily analyze and compare different areas.  
+          - The project’s scope is to support the client's CDMO department in the creation of a unique reporting environment to provide different business levels with the ability to monitor their performances at a glance, and the board level to easily analyze and compare different areas.  
           The main activities carried-on during the development phases include
-          - The collection of business requirements;
-          - The design of the architectural flow
-          - The implementation of different data layers
-          - The creation of Power BI dashboards to report market performance KPI’s. 
-          - Coordination and team managing are also ordinary tasks.
+          The collection of business requirements;
+          The design of the architectural flow
+          The implementation of different data layers
+          The creation of Power BI dashboards to report market performance KPI’s. 
+          Coordination and team managing are also ordinary tasks.
     Badges: ['PowerBI', 'SQL', 'Big Query', 'Cloud Composer', 'Python']
   - Employer: Iconsulting S.p.A.
     Place: Casalecchio di Reno (Remote)
