@@ -16,43 +16,47 @@ BasicInfo:
       Info: Fano (PU), IT
       LinkTo: ''
 
-Profile: Master's degree student passionate about teaching and excited for everything related to data in its various forms (Data Science - Data Engineering - BI). Data is evidence, and evidence fights ignorance and bias, as well as explaining most real-world dynamics. I have a strong interest in education because it is inspiring and compelling to passionately care about and be responsible for people who will be the next generation of innovators, as well as citizens of the world. Computer science is a meta-skill; its study becomes a conceptual and practical tool for creating, reasoning and learning about the dynamics that characterize most real-world domains.
+Profile: Master's degree in Computer Science passionate about teaching and excited for everything related to data in its various forms (Data Science - Data Engineering - BI). 
+Data is evidence, and evidence fights ignorance and bias, as well as explaining most real-world dynamics. Thus, I've worked with many visualization tools, such as PowerBI, Tableau and QuickSight, in order to create dashboards that could show the information hidden in the data and help business decision making. 
+Capable of defining business needs, analyzing processes and making decisions for managing teams.
+Clear and effective presenting and visualizing results.
+I have a strong interest in education and I've had several experiences in this field.
 
 
 Experience:
+  - Employer: Data Reply S.r.l.
+    Place: Bologna (Remote)
+    Positions:
+      - Title: Senior BI & Data Engineer Consultant
+        Date: May 2023 - Now
+        Details: 
+          The project’s scope is to support the client's CDMO department in the creation of a unique reporting environment to provide different business levels with the ability to monitor their performances at a glance, and the board level to easily analyze and compare different areas.  
+          The main activities carried-on during the development phases include
+          - The collection of business requirements;
+          - The design of the architectural flow
+          - The implementation of different data layers
+          - The creation of Power BI dashboards to report market performance KPI’s. 
+          - Coordination and team managing are also ordinary tasks.
+    Badges: ['PowerBI', 'SQL', 'Big Query', 'Cloud Composer', 'Python']
   - Employer: Iconsulting S.p.A.
     Place: Casalecchio di Reno (Remote)
     Positions:
       - Title: Business Analytics Specialist
-        Date: Nov 2021 - Now
+        Date: Nov 2021 - May 2023
         Details: 
           - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
           - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
         Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
-  - Employer: Liceo scientifico Fulcieri
-    Place: Forlì
-    Positions:
+  - Employer: Liceo scientifico Fulcieri, Ragazze digitali, Istituto Bramante Genga, Università di Bologna
+    Place: Forlì, Cesena, Pesaro
+    Positions: 
       - Title: Teacher
-        Date: Sep 2021 - Oct 2021
+        Date: Feb 2019 - Oct 2021
         Details: 
-          - introduction of AI base concepts and block-based visual programming. 
-        Badges: ['Public speaking', 'Block-based visual programming']
-  - Employer: Ragazze digitali - Unibo/UniMore
-    Place: Cesena (DAD)
-    Positions:
-      - Title: Teacher
-        Date: Jun 2021 - Jul 2021
-        Details: 
-          - I was the lead teacher of a 48h course aimed at sixteen to eighteen female students, based on the introduction of AI base concepts and block-based visual programming. More in detail, I was in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.
-        Badges: ['Public speaking', 'Block-based visual programming']
-  - Employer: Istituto Bramante Genga
-    Place: Pesaro
-    Positions:
-      - Title: PON project - coding lab
-        Date: Mar 2021 - Apr 2021
-        Details:
-          - Lead teacher of a 30h coding course based on Android development through block-based programming (AppInventor). Senior teacher in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.        
-        Badges: ['Public speaking', 'Block-based programming']
+          - During this period, I worked in different projects as a teacher in the field of IT.
+            In 2019 I worked as a teaching assistant in bachelor course “Mobile application development” offered by Unibo in Cesena polo.
+            In the summer of 2021 I was the lead teacher of a courses set aimed at sixteen to eighteen female students, based on the introduction of AI base concepts and block-based visual programming. More in detail, I was in charge of drawing up the course programme, giving the lectures, and managing work-groups to realize a small project summarizing the learnt notions.
+        Badges: ['Public speaking', 'Block-based visual programming', 'Teach', 'Android']
   - Employer: Data Reply IT
     Place: Bologna (Remote)
     Positions:
@@ -62,29 +66,6 @@ Experience:
           - Log analysis techniques for log anomaly detection task
           - Deep learning models
         Badges: ['Python', 'Tensorflow', 'Data Processing', 'Docker']
-  - Employer: Università di Bologna
-    Place: Cesena
-    Positions:
-      - Title: Teaching assistant - lab tutor 
-        Date: Feb 2019 
-        Details:
-          - Teaching assistant in bachelor course “Mobile application development” offered by Unibo in Cesena polo
-          - Lab lessons and lectures
-          - Preparation of educational material
-        Badges: ['Android']
-  - Employer: Centro studi Manzoni
-    Place: Fano
-    Positions:
-      - Title: It teacher 
-        Date: Oct 2018 - Jul 2019
-        Badges: []
-  - Employer: Computer sistemi
-    Place: Fano
-    Positions:
-      - Title: Intern - Android developer
-        Date: Feb 2017 
-        Details:
-        Badges: ['Android']
 
 Education:
   - Course: Master degree in computer science and engineering
@@ -138,9 +119,9 @@ Languages:
     Level: B2
 
 Diplomas:
-  - Tableau Training for Data Science (Jul 2021) - Udemy
   - AWS Certified - Cloud Practitioner (Oct 2021) - AWS
   - Microsoft Certified - Power BI Data Analyst Associate (Dec 2022)
+  - Tableau Desktop Specialist (Dec 2023)
 
 Interests:
   - Education
