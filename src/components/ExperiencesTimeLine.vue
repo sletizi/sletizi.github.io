@@ -55,6 +55,24 @@ export default {
             messageWhenNoItems: 'There are not items',
             experiences : [
         {
+            from: new Date(2024,3),
+            title: "Senior BI & Data Engineer Consultant - Data Reply IT",
+            description:"Gestione della data platform aziendale del cliente mediante la creazione di nuovi flussi dati, implementazione di estrazioni dati ad hoc tramite API, realizzazione di dashboard analitiche di medio alta complessità in Microsoft PBI. Gestione e organizzazione di risorse junior.",
+            color : "#B1CFEB"
+        },
+        {
+            from: new Date(2023,5),
+            title: "BI & Data Engineer Consultant - Data Reply IT",
+            description:"Gestione della data platform aziendale del cliente mediante la creazione di nuovi flussi dati, ",
+            color : "#B1CFEB"
+        },
+        {
+            from: new Date(2021,10),
+            title: "Business Analytics Specialist - Iconsulting S.p.A.",
+            description:"Gestione della data platform aziendale del cliente mediante la creazione di nuovi flussi dati, implementazione di estrazioni dati ad hoc tramite API, realizzazione di dashboard analitiche di medio alta complessità in Microsoft PBI. Gestione e organizzazione di risorse junior.",
+            color : "#B1CFEB"
+        },
+        {
             from: new Date(2021,10),
             title: "Business Analytics Specialist - Iconsulting S.p.A.",
             description:"Realizzazione di flussi ETL per l'alimentazione di dashboard analitiche realizzate in Microsoft PowerBI",
