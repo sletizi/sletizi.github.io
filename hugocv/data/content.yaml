@@ -36,11 +36,10 @@ Experience:
       - Title: Senior BI & Data Engineer Consultant
         Date: May 2023 - Now
         Details: 
-          - The main activities carried-on include
-          - the collection of business requirements
-          - the design of the architectural flow
-          - the implementation of different data layers
-          - the creation of Power BI dashboards to report market performance KPI’s
+          - Collection of business requirements and support to business users
+          - Design of the architectural flow
+          - Implementation of different data layers in DWH
+          - Creation of Power BI dashboards to report market performance KPI’s
           - Coordination and team managing 
     Badges: ['PowerBI', 'SQL', 'Big Query', 'Cloud Composer', 'Python']
   - Employer: Iconsulting S.p.A.

@@ -14,9 +14,8 @@
             <v-responsive
                 class="mr-6 ml-6 title font-weight-light mb-8"
             >
-                Data Enthusiast e grande sostenitore della frase "Without data you're jusy another person with an opinion".
+                Data Enthusiast e grande sostenitore della citazione "Without data you're jusy another person with an opinion".
                 Da qualche anno nutro un forte interesse verso la didattica perché trovo stimolante e avvincente prendersi cura con passione della formazione di coloro che saranno la nuova generazione di innovatori, oltre che cittadini del mondo.
-                Ritengo che il sistema scolastico giochi un ruolo fondamentale soprattutto nello stimolare l’interesse degli studenti verso le discipline informatiche, i cui strumenti permeano la vita quotidiana.
             </v-responsive>
 
             <v-avatar
