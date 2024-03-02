@@ -57,7 +57,7 @@ export default {
         {
             from: new Date(2024,2),
             title: "Senior BI & Data Engineer Consultant - Data Reply IT",
-            description:"Gestione della data platform aziendale del cliente mediante la creazione di nuovi flussi dati, implementazione di estrazioni dati ad hoc tramite API, realizzazione di dashboard analitiche di medio alta complessità in Microsoft PBI. Gestione e organizzazione di risorse junior.",
+            description:"",
             color : "#B1CFEB"
         },
         {
