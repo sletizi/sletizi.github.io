@@ -96,11 +96,12 @@ Skills:
       - Java
       - SQL
       - Git
-  - Family: Frameworks
+  - Family: Frameworks & Library
     Items:
       - Vue
       - Tensorflow
       - Keras
+      - Spark
   - Family: BI
     Items:
       - PowerBI
