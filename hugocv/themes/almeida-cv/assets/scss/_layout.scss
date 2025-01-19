@@ -8,7 +8,7 @@
         height: 100%;
         padding: 3rem 4rem;
 
-        @media screen {
+        /*@media screen {
             &::after {
                 content: '2020 © by Inês Almeida   |   ines-almeida.com';
                 height: 4rem;
@@ -17,7 +17,7 @@
                 bottom: 0.5rem;
                 color: darken($color-white, 10%);
             }
-        }
+        }*/
     }
 
     &__right {
