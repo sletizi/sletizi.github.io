@@ -108,9 +108,12 @@ Languages:
     Level: B2
 
 Diplomas:
-  - AWS Certified - Cloud Practitioner (Oct 2021) - AWS
-  - Microsoft Certified - Power BI Data Analyst Associate (Dec 2022)
-  - Tableau Desktop Specialist (Dec 2023)
+  - Name: AWS Certified - Cloud Practitioner (Oct 2021) - AWS
+    Img: https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png
+  - Name: Microsoft Certified - Power BI Data Analyst Associate (Dec 2022)
+    Img: https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png
+  - Name: Tableau Desktop Specialist (Dec 2023)
+    Img: https://images.credly.com/size/680x680/images/ef3e7933-f1f1-4bba-9b10-f278188c72ad/image.png
 
 Interests:
   - Education
