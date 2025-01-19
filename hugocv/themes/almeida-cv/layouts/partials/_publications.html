@@ -9,8 +9,9 @@
         {{ range .Site.Data.content.Publications }}
             <div style="margin-top: 15px;">
                 <h4> {{ .Title | safeHTML }}</h3>
-                <h5> {{ .Publisher | safeHTML }}</h4>
-                <h5> {{ .Date | safeHTML }}</h4>
+                <br>
+                <li> {{ .Publisher | safeHTML }}</li>
+                <li> {{ .Date | safeHTML }}</l1>
                 <a href="{{.Link}}"> Link here</a>
             </div>
         {{ end }}
