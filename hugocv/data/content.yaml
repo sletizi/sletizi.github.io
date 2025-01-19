@@ -3,12 +3,9 @@ BasicInfo:
   LastName: Letizi
   Photo: img/avatar.jpg
   Contacts:
-    - Icon: fas fa-phone
-      Info: +39 3921695488
-      LinkTo: 'tel:+39 3921695488'
     - Icon: fas fa-envelope
       Info: s.letizi@gmail.com
-      LinkTo: 'mailto:+39 3921695488'
+      LinkTo: 'mailto:s.letizi@gmail.com'
     - Icon: fas fa-globe
       Info: sletizi.github.io
       LinkTo: https://sletizi.github.io/
