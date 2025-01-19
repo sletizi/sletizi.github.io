@@ -41,7 +41,9 @@ Experience:
         Details: 
           - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
           - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
-          - I've worked with users of various business areas, such as Marketing, Sales, and Finance
+          - Created interactive dashboards using Power BI to monitor key performance of various business areas, such as Marketing, Sales, and Finance
+          - Conducted statistical analysis to test hypotheses and draw data-driven conclusions
+          - Performed exploratory data analysis to understand the underlying structure of large and complex datasets
         Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
   - Employer: Liceo scientifico Fulcieri, Ragazze digitali, Istituto Bramante Genga, Università di Bologna
     Place: Forlì, Cesena, Pesaro
