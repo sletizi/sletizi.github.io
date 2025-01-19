@@ -31,7 +31,7 @@ Experience:
           - Implementation of different data layers in DWH
           - Creation of Power BI dashboards to report market performance KPI’s
           - Coordination and team managing 
-          - BI Recruitment Interview Lead, in charge of preparing, organizing, and overseeing the recruitment and selection of candidates
+          - BI Recruitment Interview Lead - in charge of preparing, organizing, and overseeing the recruitment and selection of candidates
         Badges: ['Requirements Analysis','PowerBI', 'SQL', 'Big Query', 'Google Cloud', 'Python']
   - Employer: Iconsulting S.p.A.
     Place: Casalecchio di Reno (Remote)
@@ -40,10 +40,10 @@ Experience:
         Date: Nov 2021 - May 2023
         Details: 
           - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
-          - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
           - Created interactive dashboards using Power BI to monitor key performance of various business areas, such as Marketing, Sales, and Finance
           - Conducted statistical analysis to test hypotheses and draw data-driven conclusions
           - Performed exploratory data analysis to understand the underlying structure of large and complex datasets
+          - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
         Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
   - Employer: Liceo scientifico Fulcieri, Ragazze digitali, Istituto Bramante Genga, Università di Bologna
     Place: Forlì, Cesena, Pesaro
