@@ -6,7 +6,7 @@
     <div class="sideSection__content">
         <ul>
             {{ range .Site.Data.content.Diplomas }}
-            <img src="{{ .Img }}"/>
+            <img src="{{ .Img }}" width="20" height="20"/>
             <li>{{ .Name | safeHTML }}</li>
             <br>
             {{ end }}
