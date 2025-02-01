@@ -24,18 +24,10 @@
         >
           <v-icon size="24px">{{ socialAcc.icon }}</v-icon>
         </v-btn>
-        <v-btn
-          @click="openMailProgram"
-          class="mx-4"
-          dark
-          icon
-        >
-          <v-icon size="24px">mdi-email</v-icon>
-        </v-btn>
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Sito realizzato da me con Vue.js<!--Made by myself with Vue.js and Vuetify--></strong>
+        {{ new Date().getFullYear() }} — <strong>Made by myself with Vue.js and Vuetify<!--Made by myself with Vue.js and Vuetify--></strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -47,10 +39,6 @@ export default {
     data: () => ({
       mySocialAccount: [
         {
-            profileLink:'https://www.facebook.com/simone.letizi',
-            icon:'fab fa-facebook'
-        },
-        {
             profileLink:'https://www.linkedin.com/in/simone-letizi-056293168/',
             icon:'fab fa-linkedin'
         },
@@ -61,7 +49,7 @@ export default {
     }),
     methods:{
         openMailProgram: function(){
-            window.open('mailto:s.letizi@gmail.com');
+
         },
          openInNewTab:function(url) {
           var win = window.open(url, '_blank');
