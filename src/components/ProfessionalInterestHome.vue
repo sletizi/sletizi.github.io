@@ -59,7 +59,7 @@ export default {
                 text: 'Da riempire',
             },
             {
-                icon: 'https://files.oaiusercontent.com/file-FyJ1J4ZAdBz5DbnvYfXu19?se=2025-02-01T18%3A51%3A53Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D07d24255-4e87-4ee4-a215-ac67ba6a282c.webp&sig=W47IXsRVbY/LR%2BfYM6ONIXBaeUcq8EKBTh/efvhFtpI%3D',
+                icon: 'https://images.ctfassets.net/jozd1x4pyd20/sIlTd891FLdPQJkJH50wW/412505a72e3793f2e6c3dea7142c4308/DataPlatform-300523.jpg',
                 title: 'Data <br/> Engineering',
                 text: 'Da riempire',
             },

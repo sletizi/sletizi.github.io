@@ -69,7 +69,7 @@ export default {
         return {
             interests:[
             {
-                name: 'Data Science',
+                name: 'Business Intelligence',
                 quote_it: 'Potrai avere dati senza informazione, ma mai avere informazioni senza dati. <br> (Daniel Keys Moran Quotes)',
                 color:'#4A4F4C'
             },
@@ -77,11 +77,6 @@ export default {
                 name: 'Insegnamento',
                 quote_it: "Al bambino noi non possiamo consegnare l'oceano, un secchiello alla volta, pero' gli possiamo insegnare a nuotare nell'oceano e allora andra' fin dove le sue forze lo porteranno, poi inventera' una barca e navighera' con la barca, poi con la nave. Dobbiamo cioe' consegnare degli strumenti culturali.La conoscenza non e' una quantita', e' una ricerca. Non dobbiamo dare ai bambini delle quantita' di sapere, ma degli strumenti per ricercare, degli strumenti culturali perche' lui crei, spinga la sua ricerca fin dove puo'; poi certamente tocchera' sempre a noi spingere piu' in la' e aiutarlo a affinare i suoi strumenti. <br> (Gianni Rodari)",
                 color:'#d4d9d2'
-            },
-            {
-                name: 'Intelligenza Artificiale',
-                quote_it: "L'Intelligenza Artificiale è una delle cosa più importanti su cui l'umanità abbia mai lavorato; è molto più intensa dell'elettricità o del fuoco <br> (Sundar Pichai)",
-                color:'#DAD6CC'
             },
             {
                 name: 'Insegnamento',
