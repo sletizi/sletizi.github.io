@@ -37,6 +37,10 @@
 
                 >
                 <v-container > 
+                    <v-divider></v-divider>
+                        Utilizzati di recente
+                        <v-icon class="mx-4">mdi-star</v-icon>
+                    <v-divider></v-divider>
                     <v-row v-for="nr in 8" :key="nr">
                         <v-col
                             align="center"
@@ -45,7 +49,16 @@
                             <div>
                                 <v-img contain :src="skillsChuncked[nr-1][nc-1].logo_url" width='100' height='50'/>
                             </div> 
-                        </v-col>      
+                        </v-col> 
+                        <template v-if="nr === 3">
+                            <v-col cols="12" class="text-center my-4">
+                                <v-divider></v-divider>
+                                Conoscenza accademica e uso in progetti universitari
+                                <v-icon class="mx-4">mdi-school</v-icon>
+                                <v-divider></v-divider>
+                            </v-col>
+                        </template>
+    
                     </v-row>
                 </v-container>
                 
@@ -62,6 +75,51 @@ export default {
     data() {
         return {
             tech_skills: [
+                {
+                    name:"PowerBI",
+                    site:"",
+                    logo_url:require('../assets/techs/powerbi.png'),
+                },
+                {
+                    name:"Git",
+                    site:"",
+                    logo_url:require('../assets/techs/git.png'),
+                },
+                {
+                    name:"SQL",
+                    site:"",
+                    logo_url:require('../assets/techs/SQL.png'),
+                },
+                {
+                    name:"GCP",
+                    site:"",
+                    logo_url:require('../assets/techs/GCP.png'),
+                },
+                {
+                    name:"dbt",
+                    site:"",
+                    logo_url:require('../assets/techs/dbt.png'),
+                },
+                {
+                    name:"AWS",
+                    site:"",
+                    logo_url:require('../assets/techs/AWS.png'),
+                },
+                {
+                    name:"Pandas",
+                    site:"",
+                    logo_url:require('../assets/techs/pandas.png'),
+                },
+                {
+                    name:"Tableau",
+                    site:"",
+                    logo_url:require('../assets/techs/tableau.svg'),
+                },
+                {
+                    name:"Python",
+                    site:"",
+                    logo_url:require('../assets/techs/python.png'),
+                },
                 {
                     name:"Android",
                     site:"https://developer.android.com/docs",
@@ -107,26 +165,7 @@ export default {
                     site:"",
                     logo_url:require('../assets/techs/firebase.png'),
                 },
-                {
-                    name:"PowerBI",
-                    site:"",
-                    logo_url:require('../assets/techs/powerbi.png'),
-                },
-                {
-                    name:"Git",
-                    site:"",
-                    logo_url:require('../assets/techs/git.png'),
-                },
-                {
-                    name:"json",
-                    site:"",
-                    logo_url:require('../assets/techs/json.png'),
-                },
-                {
-                    name:"SQL",
-                    site:"",
-                    logo_url:require('../assets/techs/sql.png'),
-                },
+                
                 {
                     name:"Hadoop",
                     site:"http://hadoop.apache.org",
@@ -137,26 +176,14 @@ export default {
                     site:"",
                     logo_url:require('../assets/techs/spark.png'),
                 },
-                {
-                    name:"Python",
-                    site:"",
-                    logo_url:require('../assets/techs/python.png'),
-                },
-                {
-                    name:"Pandas",
-                    site:"",
-                    logo_url:require('../assets/techs/pandas.png'),
-                },
+                
+                
                 {
                     name:"Numpy",
                     site:"",
                     logo_url:require('../assets/techs/numpy.png'),
                 },
-                {
-                    name:"Tableau",
-                    site:"",
-                    logo_url:require('../assets/techs/tableau.svg'),
-                },
+                
                 {
                     name:"Docker",
                     site:"",
