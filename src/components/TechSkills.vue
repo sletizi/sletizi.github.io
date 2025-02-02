@@ -88,7 +88,7 @@ export default {
                 {
                     name:"SQL",
                     site:"",
-                    logo_url:require('../assets/techs/SQL.png'),
+                    logo_url:require('../assets/techs/sql.png'),
                 },
                 {
                     name:"GCP",
