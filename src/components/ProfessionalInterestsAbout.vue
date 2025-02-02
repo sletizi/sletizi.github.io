@@ -70,7 +70,7 @@ export default {
             interests:[
             {
                 name: 'Business Intelligence',
-                quote_it: 'Potrai avere dati senza informazione, ma mai avere informazioni senza dati. <br> (Daniel Keys Moran Quotes)',
+                quote_it: 'Potrai avere dati senza informazione, ma mai avere informazioni senza dati. <br> (Daniel Keys Moran)',
                 color:'#4A4F4C'
             },
             {
