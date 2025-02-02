@@ -23,18 +23,7 @@
           <div class="py-12"></div>
           <projects/>
             <div class="py-12"></div>
-      </section>
-      <section>
-        <v-row>
-            <v-col cols=12>
-                <codersrank-summary username="moneletizi94" show-avatar="false"></codersrank-summary>
-            </v-col>
-        </v-row>
-      </section>
-        <section>
-          <div class="py-12"></div>
-            <div class="py-12"></div>
-      </section>        
+      </section>    
              
    </v-content>      
 </template>
