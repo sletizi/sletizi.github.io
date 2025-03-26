@@ -13,7 +13,7 @@ BasicInfo:
       Info: Fano (PU), IT
       LinkTo: ''
 
-Profile: Data Expert specializing in Business Intelligence and Data Engineering, with experience in designing and developing advanced dashboards and data pipelines on cloud architectures. I have worked closely with business stakeholders and technical teams, supporting strategic decisions through data-driven solutions that enhance performance monitoring. Throughout my career, I have contributed to data transformation projects for major retail and utility companies, supporting sales, marketing, finance, and commercial areas. I was involved in the entire data lifecycle, from the requirements gathering to table engineering within the data lake/DWH, and finally to the creation of interactive dashboards.
+Profile: Data Expert specializing in Business Intelligence and Data Engineering, with experience in designing and developing advanced dashboards, models and data pipelines on cloud architectures. I have worked closely with business stakeholders and technical teams, supporting strategic decisions through data-driven solutions that enhance performance monitoring. Throughout my career, I have contributed to data transformation projects for retail and utility industries, supporting sales, marketing, finance, and commercial business functions. I was involved in the entire data lifecycle, from the requirements gathering to table engineering within the data lake/DWH, and finally to the creation of interactive dashboards.
 
 
 Experience:
@@ -23,24 +23,25 @@ Experience:
       - Title: Senior BI & Data Engineer Consultant
         Date: May 2023 - Now
         Details: 
-          - Collection of business requirements and support to business users
-          - Design of the architectural flow
-          - Implementation of different data layers in DWH
-          - Creation of Power BI dashboards to report market performance KPI’s
-          - Coordination and team managing 
-          - BI Recruitment Interview Lead - in charge of preparing, organizing, and overseeing the recruitment and selection of candidates
-        Badges: ['Requirements Analysis','PowerBI', 'SQL', 'Big Query', 'Google Cloud', 'Python']
+          - Gathering business requirements and supporting business users
+          - Designing architectural data flows (ETL pipelines) across different data layers
+          - Optimizing complex and slow-performing data models in Power BI
+          - Strong expertise in dimensional modeling
+          - Creating Power BI dashboards to report market performance KPIs
+          - Coordinating and managing teams
+          - Leading BI recruitment interviews; responsible for preparing, organizing, and overseeing candidate selection
+        Badges: ['AWS Athena','dbt','Requirements Analysis','PowerBI', 'SQL', 'Big Query', 'Google Cloud', 'Python']
   - Employer: Iconsulting S.p.A.
     Place: Casalecchio di Reno (Remote)
     Positions:
       - Title: Business Analytics Specialist
         Date: Nov 2021 - May 2023
         Details: 
-          - Responsible for the implementation of SQL ETL flows (Batch) useful to populate analytics dashboard realized in Microsoft PowerBI
-          - Created interactive dashboards using Power BI to monitor key performance of various business areas, such as Marketing, Sales, and Finance
+          - Implemented SQL ETL flows in Postgres in order to populate analytical dashboards developed in Microsoft Power BI
+          - Created interactive Power BI dashboards to monitor key performance metrics across various business functions, including Marketing, Sales, and Finance
           - Conducted statistical analysis to test hypotheses and draw data-driven conclusions
-          - Performed exploratory data analysis to understand the underlying structure of large and complex datasets
-          - Responsible for the implementation of REST services through OSB (Oracle Service Bus) resources
+          - Performed exploratory data analysis (EDA) to uncover patterns and trends in large, complex datasets
+          - Developed and deployed REST services using OSB (Oracle Service Bus)
         Badges: ['PowerBI', 'SQL', 'Postgres', 'SQL Server', 'REST API', 'OSB']
   - Employer: Liceo scientifico Fulcieri, Ragazze digitali, Istituto Bramante Genga, Università di Bologna
     Place: Forlì, Cesena, Pesaro
@@ -83,7 +84,6 @@ Skills:
       - Scala
       - HTML/VueJS 
       - Javascript
-      - CSS
       - Java
       - SQL
       - Git
@@ -91,6 +91,7 @@ Skills:
     Items:
       - Vue
       - Tensorflow
+      - dbt
       - Keras
       - Spark
   - Family: BI
