@@ -63,27 +63,6 @@
         "description":"AAAA"
     },
     {
-        "title":"Io e Davide 👨‍💼👨‍💻",
-        "place":"Roma",
-        "date":"10/2019",
-        "name":"02.jpg",
-        "description":"AAAA"
-    },
-    {
-        "title":"Felicità 😊",
-        "place":"Cesena",
-        "date":"12/2019",
-        "name":"12.jpg",
-        "description":"AAAA"
-    },
-    {
-        "title":"Piazza del popolo 📍",
-        "place":"Cesena",
-        "date":"09/2018",
-        "name":"13.jpg",
-        "description":"AAAA"
-    },
-    {
         "title":"Concerto dei Coldplay 🎤 ",
         "place":"Milano",
         "date":"07/2017",
@@ -95,20 +74,6 @@
         "place":"Fano",
         "date":"09/2018",
         "name":"21.jpg",
-        "description":"AAAA"
-    },
-    {
-        "title":"Serate estive 🔝🕺",
-        "place":"Riccione",
-        "date":"08/2019",
-        "name":"30.jpg",
-        "description":"AAAA"
-    },
-    {
-        "title":"Trekking 🏔",
-        "place":"Gola del Furlo",
-        "date":"09/2016",
-        "name":"11.jpg",
         "description":"AAAA"
     },
     {
@@ -133,24 +98,10 @@
         "description":"AAAA"
     },
     {
-        "title":"Allianz Stadium ⚪⚫",
-        "place":"Torino",
-        "date":"09/2018",
-        "name":"41.jpg",
-        "description":"AAAA"
-    },
-    {
         "title":"Adrenalina 🤩",
         "place":"Fano",
         "date":"09/2018",
         "name":"42.jpg",
-        "description":"AAAA"
-    },
-    {
-        "title":"Vacanze in famiglia 🏔, Gennaio 2020",
-        "place":"Molveno",
-        "date":"01/2019",
-        "name":"43.jpg",
         "description":"AAAA"
     }
 ]
