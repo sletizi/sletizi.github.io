@@ -70,5 +70,9 @@ export default new VueRouter({
         ]
       },
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // Riporta sempre in cima alla pagina
+    return { x: 0, y: 0 };
+  }
 });
