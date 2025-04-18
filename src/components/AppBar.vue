@@ -3,15 +3,18 @@
     <v-app-bar>
       <v-toolbar-title>
         <v-avatar
-            class="mr-3"
-            color="grey lighten-5"
-            size="60">
-              <v-img
-                contain
-                src="../assets/logos/logo.png"
-                @click="goHome"
-              ></v-img>
-          </v-avatar>
+          class="mr-3 ma-2"
+          color="grey lighten-5"
+          size="60"
+        >
+          <v-img
+            contain
+            src="../assets/logos/logo.png"
+            @click="goHome"
+            style="max-height: 50px;"
+          ></v-img>
+        </v-avatar>
+
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items  class="hidden-sm-and-down">
