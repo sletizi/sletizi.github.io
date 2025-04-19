@@ -6,9 +6,10 @@
           class="mr-3 ma-2"
           color="grey lighten-5"
           size="60"
+          style="overflow: hideen;aspect-ratio: 1/1;"
         >
           <v-img
-            contain
+            cover
             src="../assets/logos/logo.png"
             @click="goHome"
             style="max-height: 50px;"
