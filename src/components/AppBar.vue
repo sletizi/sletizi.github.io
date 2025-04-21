@@ -53,7 +53,6 @@ export default {
         { icon: "mdi-home", title: "Home", to: () => this.$router.push('/') , href: "/"},
         { icon: "mdi-account", title: "Su di me", to: ()=> this.$router.push('/about') , href: "/about"},
         { icon: "mdi-brush", title: "Progetti",to: ()=> this.$router.push('/projects'), href: "/projects"},
-        { icon: "mdi-file", title: "Curriculum",to: ()=> this.$router.push('/cv'), href: "/cv"},
         { icon: "mdi-email", title: "Contatti",to: ()=> this.$vuetify.goTo('#contact_me'), href: "#contact_me"}
       ]
     }
