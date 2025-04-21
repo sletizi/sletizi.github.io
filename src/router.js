@@ -48,27 +48,6 @@ export default new VueRouter({
       path: "/projects",
       name: "projects",
       component: Projects
-    },
-    {
-      path: "/cv",
-      name: "CV",
-      meta: {
-        title: 'Simone Letizi CV',
-        metaTags: [
-          {
-            name: 'description',
-            content: 'Simone Letizi CV'
-          },
-          {
-            property: 'og:description',
-            content: 'Simone Letizi CV'
-          },
-          {
-            name: 'og:image',
-            content: '@/assets/cv.jpg'
-          }
-        ]
-      },
     }
   ], scrollBehavior(to, from, savedPosition) {
     // Riporta sempre in cima alla pagina
