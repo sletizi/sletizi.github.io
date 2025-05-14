@@ -4,25 +4,19 @@
             <infographic/>
         </section>  
         <section id="about-me">
-            <div class="py-12"></div>
             <about-container/>
-            <div class="py-12"></div>
         </section>
         <section
             id="professional_interests"
             class="grey lighten-3"
         >
-            <div class="py-12"></div>
             <professional-interests/>
-            <div class="py-12"></div>
       </section>
       <section>
           <parallax/>
       </section>
       <section>
-          <div class="py-12"></div>
           <projects/>
-            <div class="py-12"></div>
       </section>    
              
    </v-content>      

@@ -4,7 +4,6 @@ import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Contacts from "./views/Contact.vue";
 import Projects from "./views/Projects.vue"
-import CV from "./views/cv.vue"
 
 Vue.use(VueRouter);
 
@@ -49,11 +48,6 @@ export default new VueRouter({
       path: "/projects",
       name: "projects",
       component: Projects
-    },
-    {
-      path: '/cv',
-      name: 'cv',
-      component: CV
     }
   ], scrollBehavior(to, from, savedPosition) {
     // Riporta sempre in cima alla pagina
