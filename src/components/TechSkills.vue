@@ -19,7 +19,8 @@
             md="6"
             xs="12">
                 <v-layout>
-                    <tags-ball 
+                    <transition name="fade"></transition>
+                    <tags-ball v-if="showBall"
                         class="center"
                         v-bind:style='{"border":"0px solid black"}' 
                         :width="500"
@@ -28,6 +29,13 @@
                         font="30px monaco"
                         :radius="[$vuetify.breakpoint.smAndDown ? 180 : 180]"
                         color="#535354"/>
+                        <v-img v-else
+                            src="@/assets/google_cite.jpg"
+                            width="auto"
+                            height="auto"
+                            
+                            style="opacity: 0.8;"
+                        ></v-img> 
                 </v-layout>
             </v-col>
             <v-col
@@ -74,6 +82,7 @@ import TagsBall from 'vue-tags-ball'
 export default {
     data() {
         return {
+            showBall: true,
             tech_skills: [
                 {
                     name:"PowerBI",
@@ -235,7 +244,11 @@ export default {
             var split = this.subArrays(3,this.tech_skills)
             return split
         } 
-    }
+    }, mounted() {
+    setTimeout(() => {
+      this.showBall = false;
+    }, 5000); // 5 secondi
+  },
 }
 </script>
 <style scoped>
@@ -246,4 +259,5 @@ export default {
     max-width: 500px;
     max-height: 500px;
 }
+
 </style>

@@ -22,8 +22,9 @@
                         class="font-weight-light"
                         :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"                   
                     >
-                        "Science knows no country, because knowledge belongs to humanity, and is the torch which illuminates the world."
-                        (Louis Pasteur)
+                        "Cerco verità nei dati e silenzi tra le vette: entrambi raccontano più di quanto sembri."
+
+
                     </span>
                 </v-row>
                 <br>
