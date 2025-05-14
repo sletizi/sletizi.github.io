@@ -1,7 +1,7 @@
 <template>
     <v-content align="center">
           <personal-info class="mb-4"/>
-          <custom-button class="ma-4" link="/cv" buttonText="VAI AL MIO CV"/>
+          <custom-button class="ma-4" link="https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing" buttonText="VAI AL MIO CV"/>
           <career/>
           <tech-skills/> 
           <certifications/>   
