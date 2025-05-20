@@ -21,15 +21,14 @@
         </v-btn>
       </v-col>
       <v-col align="center" cols="12" md="6">
-        <v-avatar size="170" radius="10px">
-          <v-img
-            contain
-            :src="
-              require(`../assets/projects_logos/${selectedProject.logo_file}`)
-            "
-            class="white--text align-end"
-          />
-        </v-avatar>
+        <v-img
+          :src="require(`../assets/projects_logos/${selectedProject.logo_file}`)"
+          max-width="150"
+          aspect-ratio="1"
+          class="ma-4"
+          style="padding: 10px; border-radius: 16px; background-color: white; object-fit: contain; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+        />
+
       </v-col>
     </v-row>
     <p class="ma-4 pa-4"><span v-html="selectedProject.description"></span></p>
@@ -56,10 +55,11 @@
         ></v-carousel-item>
       </v-carousel>
     </v-row>
-    <h2 class="text-center ma-4">Report</h2>
+    <h2 v-if="selectedProject.base64PDF" class="text-center ma-4">Report</h2>
     <v-row align="center" justify="center">
       <v-col  align="center" cols="12" md="12">
         <div
+        v-if="selectedProject.base64PDF"
           style="
             width: 90%;
             margin: auto;
@@ -87,7 +87,7 @@
       </v-col>
       
     </v-row>
-    <v-row align="center" justify="center" class="mb-4 ml-3 mr-3">
+    <v-row v-if="selectedProject.base64PDF" align="center" justify="center" class="mb-4 ml-3 mr-3">
       <v-btn small class="text-center ma-4" @click="page = page -1" :disabled="page<=1">
           -
         </v-btn>

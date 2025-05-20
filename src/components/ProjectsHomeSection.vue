@@ -87,10 +87,10 @@ export default {
         return {
             projects: [
             {
-                src: 'logo_fuoriclasse.png',
-                title: 'FuoriClasse',
-                text: 'L’applicazione FuoriClasse è legata al settore scolastico e ha l’obiettivo principale di migliorare l’efficienza delle comunicazioni tra studenti e docenti accompagnatori di una gita scolastica.',
-                scope: 'Tecnologie e ambito principale: Mobile Android App'
+                src: 'logo_spotistats.png',
+                title: 'SpotiStats',
+                text: 'SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.',
+                scope: 'Tecnologie e ambito principale: Data Analytics'
             },
             {
                 src: 'logo_scanbage.png',
