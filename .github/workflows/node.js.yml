@@ -14,20 +14,11 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.82.0'
-          extended: true
       
       - name: Install node dependencies
         run: |
           npm install
         
-      - name: Build hugo cv 🔧
-        run: |
-          npm run build-github-hugo
       - name: Build VueJS 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           npm run build
