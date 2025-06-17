@@ -45,7 +45,13 @@ export default {
         {
             profileLink:'https://www.instagram.com/moneletizi/',
             icon:'fab fa-instagram'
-        }]
+        },
+        {
+            profileLink:'https://github.com/sletizi',
+            icon:'fab fa-github'
+        },
+      
+      ]
     }),
     methods:{
         openMailProgram: function(){
