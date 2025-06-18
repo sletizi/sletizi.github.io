@@ -60,7 +60,7 @@
       justify="center"
       class="ma-2"
     >
-      <v-carousel height="auto" hide-delimiters cycle>
+      <v-carousel height="70vh" hide-delimiters cycle>
         <v-carousel-item
           v-for="img in selectedProject.screenshots"
           :key="img"
