@@ -30,17 +30,8 @@
                 <v-row
                 align="center"
             justify="center">
-                <v-img
-                    src="../assets/me_working.jpg"
-                />
+                    <img src="../assets/me_action_figure.png" class="action-figure"  />
                 </v-row>
-                <v-row
-                align="center"
-            justify="center">
-                    <v-img
-                    src="../assets/my_setup.jpg"
-                />
-                </v-row>    
             </v-col>        
         </v-row>  
         
@@ -56,80 +47,62 @@ export default {
             experiences : [
         {
             from: new Date(2024,2),
-            title: "Senior BI & Data Engineer Consultant - Data Reply IT",
+            title: "Analytics Engineer - Senior Consultant - Data Reply IT",
             description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2023,4),
-            title: "BI & Data Engineer Consultant - Data Reply IT",
-            description:"Gestione della data platform aziendale del cliente mediante la creazione di nuovi flussi dati, implementazione di estrazioni dati ad hoc tramite API, realizzazione di dashboard analitiche di medio alta complessità in Microsoft PBI. Gestione e organizzazione di risorse junior.",
+            title: "Analytics Engineer - Consultant - Data Reply IT",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2021,10),
             title: "Business Analytics Specialist - Iconsulting S.p.A.",
-            description:"Realizzazione di flussi ETL per l'alimentazione di dashboard analitiche realizzate in Microsoft PowerBI",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2021,8),
             title: "Docente senior progetto 'SVILUPPO APP E CONCETTI DI INTELLIGENZA ARTIFICIALE' - Liceo scientifico Fulcieri Forlì",
-            description:"Ideazione del programma, preparazione del materiale didattico e spiegazione durante le lezioni ",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2021,6),
             title: "Docente senior progetto Ragazze digitali - percorso 'Inventa la tua app con Kodular'",
-            description:"Ideazione del programma, preparazione del materiale didattico e spiegazione durante le lezioni ",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2021,3),
             title: "Esperto esterno - progetto PON coding lab - Istituto Bramante Genga",
-            description:"Ideazione del programma, preparazione del materiale didattico e spiegazione durante le lezioni ",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2021,2),
-            title: "Laurea magistrale",
-            description:"<b>Laurea magistrale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 110 e lode. <br> I miei studi si sono concentrati principalmente nell'analisi di grandi quantità di dati, aziendali e non. (Business Intelligence, Big Data, Data mining, Text Mining)",
+            title: "<b>Laurea magistrale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 110 e lode. <br> ",
+            description:"",
             color : "#BFA89E"
         },
         {
             from: new Date(2020,9),
-            title: "Stage",
-            description:"Data science presso <b>Data Reply s.r.l.</b>",
+            title: "Stage - Log Analysis: Anomaly detection - Data Reply IT",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2019,1),
-            title: "Lavoro",
-            description:"<b>Tutor didattico</b> di laboratorio con svolgimento di lezioni frontali nel corso di <b>Programmazione di sistemi mobile</b> offerto dall'<b>Università di Bologna</b> presso il polo di Cesena",
+            title: "<b>Tutor didattico</b> di laboratorio con svolgimento di lezioni frontali nel corso di <b>Programmazione di sistemi mobile</b> offerto dall'<b>Università di Bologna</b> presso il polo di Cesena",
+            description:"",
             color : "#B1CFEB"
         },
         {
             from: new Date(2018, 6),
-            title: "Laurea triennale",
-            description:"<b>Laurea triennale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 100/110",
-            color : "#BFA89E"
-        },
-        {
-            from: new Date(2018, 9),
-            title: "Lavoro - Docente",
-            description: "<b>Docente di Informatica</b> presso l'istituto Centro Studi Manzoni di Fano.",
-            color : "#B1CFEB"
-        },
-        {
-            from: new Date(2017, 1),
-            title: "Stage",
-            description:"<b>Stage</b> con mansioni di programmatore Android presso <b>Computer Sistemi s.r.l.</b>",
-            color : "#B1CFEB"
-        },
-        {
-            from: new Date(2013, 7),
-            title: "Diploma",
-            description:"<b>Diploma di maturità in Ragioneria Perito Commerciale e Programmatore</b>\n Votazione: 98/100",
+            title: "Laurea triennale in Ingegneria e Scienze Informatiche</b> presso l'Università di Bologna (sede di Cesena). <br> votazione: 100/110",
+            description:"",
             color : "#BFA89E"
         }],
         }
@@ -139,3 +112,25 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.action-figure {
+  max-width: 100%;
+  height: auto;
+  width: 350px; /* larghezza di default */
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .action-figure {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-figure {
+    width: 120px;
+  }
+}
+</style>
