@@ -11,7 +11,11 @@
         "build-dev-hugo": "rm -rf ../public/cv/ & env-cmd -e development --use-shell \"cd hugocv && hugo -D -d ../public/cv/\"",
         "build-github-hugo": "rm -rf ../public/cv/ & env-cmd -e production --use-shell \"cd hugocv && hugo -D -d ../public/cv/\"",
         "start": "node server.js",
-        "lint": "vue-cli-service lint",
+        "lint": "eslint --ext .js,.vue src",
+        "security:secrets": "node scripts/check-secrets.js",
+        "validate": "npm run lint && npm run security:secrets",
+        "validate:full": "npm run validate && npm run build",
+        "hooks:install": "git config core.hooksPath .githooks",
         "deploy": "npm run build && cd ./dist && cp index.html 404.html"
     },
     "dependencies": {
