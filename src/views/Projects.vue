@@ -36,7 +36,7 @@
     </v-row>
 
     <!-- DESCRIZIONE --------------------------------------------------- -->
-    <p class="ma-4 pa-4"><span v-html="selectedProject.description"></span></p>
+    <p class="ma-4 pa-4"><span v-html="sanitizeHtml(selectedProject.description)"></span></p>
 
     <!-- TAG TECNOLOGIE ------------------------------------------------ -->
     <v-row align="center" justify="center" class="ma-3">
@@ -71,11 +71,11 @@
     </v-row>
 
     <!-- 📄 PDF VIEWER (solo se non è la guida) ------------------------ -->
-    <h2 v-if="selectedProject.base64PDF && !isPowerBIGuide"
+    <h2 v-if="hasPdf && !isPowerBIGuide"
         class="text-center ma-4">Report</h2>
 
     <v-row
-      v-if="selectedProject.base64PDF && !isPowerBIGuide"
+      v-if="hasPdf && !isPowerBIGuide"
       align="center"
       justify="center"
     >
@@ -93,7 +93,8 @@
 
           <vue-pdf-embed
             ref="pdfRef"
-            :source="`data:application/pdf;base64,${selectedProject.base64PDF}`"
+            :source="pdfSource"
+            image-resources-path="https://unpkg.com/pdfjs-dist/web/images/"
             :page="page"
             @progress="loadedRatio = $event"
             @link-clicked="page = $event"
@@ -105,7 +106,7 @@
 
     <!-- NAVIGAZIONE PAGINE PDF (solo se non è la guida) --------------- -->
     <v-row
-      v-if="selectedProject.base64PDF && !isPowerBIGuide"
+      v-if="hasPdf && !isPowerBIGuide"
       align="center"
       justify="center"
       class="mb-4 ml-3 mr-3"
@@ -140,6 +141,7 @@
 <script>
 import projectsData from "@/data/projects.json";
 import VuePdfEmbed from "vue-pdf-embed/dist/vue2-pdf-embed";
+import { sanitizeHtml } from "@/utils/sanitizeHtml";
 
 export default {
   components: { VuePdfEmbed },
@@ -160,12 +162,27 @@ export default {
     hasScreen() {
       return this.selectedProject.screenshots.length > 0;
     },
+    hasPdf() {
+      return Boolean(this.selectedProject.pdf);
+    },
     isPowerBIGuide() {
       return this.selectedProject.name === "Power BI Guide";
+    },
+    pdfSource() {
+      if (!this.hasPdf) {
+        return null;
+      }
+
+      return {
+        url: `${process.env.BASE_URL}projects_pdf/${this.selectedProject.pdf}`,
+        cMapUrl: 'https://unpkg.com/pdfjs-dist/cmaps/',
+        cMapPacked: true,
+      };
     },
   },
 
   methods: {
+    sanitizeHtml,
     projects_name() {
       return projectsData.map((p) => p.name);
     },
@@ -177,6 +194,7 @@ export default {
   watch: {
     selectedTab() {
       this.page = 1;          // reset pagina PDF
+      this.numPages = 1;      // reset numero pagine
       this.loadedRatio = 0;   // reset progress bar
     },
   },
