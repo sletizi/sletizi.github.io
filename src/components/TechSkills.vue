@@ -49,24 +49,15 @@
                         Utilizzati di recente
                         <v-icon class="mx-4">mdi-star</v-icon>
                     <v-divider></v-divider>
-                    <v-row v-for="nr in 8" :key="nr">
+                    <v-row v-for="(skillsRow, nr) in skillsChuncked" :key="nr">
                         <v-col
                             align="center"
-                            v-for="nc in 3" 
+                            v-for="(skill, nc) in skillsRow" 
                             :key="nc">
                             <div>
-                                <v-img contain :src="skillsChuncked[nr-1][nc-1].logo_url" width='100' height='50'/>
+                                <v-img contain :src="skill.logo_url" width='100' height='50'/>
                             </div> 
                         </v-col> 
-                        <template v-if="nr === 3">
-                            <v-col cols="12" class="text-center my-4">
-                                <v-divider></v-divider>
-                                Conoscenza accademica e uso in progetti universitari
-                                <v-icon class="mx-4">mdi-school</v-icon>
-                                <v-divider></v-divider>
-                            </v-col>
-                        </template>
-    
                     </v-row>
                 </v-container>
                 
@@ -128,95 +119,6 @@ export default {
                     name:"Python",
                     site:"",
                     logo_url:require('../assets/techs/python.png'),
-                },
-                {
-                    name:"Android",
-                    site:"https://developer.android.com/docs",
-                    logo_url:require('../assets/techs/android.png'),
-                },
-                {
-                    name:"Scala",
-                    site:"",
-                    logo_url:require('../assets/techs/scala.png'),
-                },
-                {
-                    name:"Java",
-                    site:"",
-                    logo_url:require('../assets/techs/java.jpg'),
-                },
-                {
-                    name:"C",
-                    site:"",
-                    logo_url:require('../assets/techs/c.png'),
-                },
-                {
-                    name:"C#",
-                    site:"",
-                    logo_url:require('../assets/techs/c_sharp.png'),
-                },
-                {
-                    name:"JavaScript,HTML,CSS",
-                    site:"",
-                    logo_url:require('../assets/techs/HTML.png'),
-                },
-                {
-                    name:"PHP",
-                    site:"",
-                    logo_url:require('../assets/techs/php.png'),
-                },
-                {
-                    name:"MEVN Stack",
-                    site:"",
-                    logo_url:require('../assets/techs/mevn.png'),
-                },
-                {
-                    name:"Firebase",
-                    site:"",
-                    logo_url:require('../assets/techs/firebase.png'),
-                },
-                
-                {
-                    name:"Hadoop",
-                    site:"http://hadoop.apache.org",
-                    logo_url:require('../assets/techs/hadoop.png'),
-                },
-                {
-                    name:"Spark",
-                    site:"",
-                    logo_url:require('../assets/techs/spark.png'),
-                },
-                
-                
-                {
-                    name:"Numpy",
-                    site:"",
-                    logo_url:require('../assets/techs/numpy.png'),
-                },
-                
-                {
-                    name:"Docker",
-                    site:"",
-                    logo_url:require('../assets/techs/dockers.png'),
-                },
-                {
-                    name:"Kubernetes",
-                    site:"",
-                    logo_url:require('../assets/techs/kubernetes.png'),
-                },
-                {
-                    name:"Keras",
-                    site:"",
-                    logo_url:require('../assets/techs/keras.png'),
-                },
-                {
-                    name:"Scikit-learn",
-                    site:"",
-                    logo_url:require('../assets/techs/scikit.png'),
-                },
-                {
-                    name:"Swagger",
-                    site:"",
-                    logo_url:require('../assets/techs/swagger.png'),
                 }]
                 
 
