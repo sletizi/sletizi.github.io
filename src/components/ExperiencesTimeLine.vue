@@ -46,6 +46,12 @@ export default {
             messageWhenNoItems: 'There are not items',
             experiences : [
         {
+            from: new Date(2025,9),
+            title: "Senior Data Engineer - Tuidi",
+            description:"",
+            color : "#B1CFEB"
+        },
+        {
             from: new Date(2024,2),
             title: "Analytics Engineer - Senior Consultant - Data Reply IT",
             description:"",
