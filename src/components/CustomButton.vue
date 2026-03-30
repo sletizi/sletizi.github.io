@@ -4,6 +4,8 @@
         outlined
         large
         :href="link"
+        :rel="isExternal ? 'noopener noreferrer' : null"
+        :target="isExternal ? '_blank' : null"
     >
         <span class="grey--text text--darken-1 font-weight-bold">
             {{ buttonText }}
@@ -17,6 +19,11 @@ export default{
     buttonText: String,
     toDo:Function,
     link:String
+  },
+  computed: {
+    isExternal() {
+      return /^https?:\/\//.test(this.link || '')
+    }
   }
 }
 </script>

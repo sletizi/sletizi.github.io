@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 export default new VueRouter({
   mode: "history",
-  base: process.env.VUE_APP_BASE_URL,
+  base: process.env.BASE_URL || "/",
   routes: [
     {
       path: "/",
@@ -49,7 +49,7 @@ export default new VueRouter({
       name: "projects",
       component: Projects
     }
-  ], scrollBehavior(to, from, savedPosition) {
+  ], scrollBehavior(_to, _from, _savedPosition) {
     // Riporta sempre in cima alla pagina
     return { x: 0, y: 0 };
   }

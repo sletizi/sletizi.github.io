@@ -47,7 +47,7 @@
 
                 <v-card-title
                   class="justify-center font-weight-black text-uppercase"
-                  v-html="title"
+                  v-html="sanitizeHtml(title)"
                 ></v-card-title>
 
                 <v-card-subtitle>
@@ -56,7 +56,7 @@
 
                 <v-card-text
                   class="subtitle-1"
-                  v-html="text"
+                  v-html="sanitizeHtml(text)"
                 >
                 </v-card-text>
               </v-card>
@@ -82,6 +82,8 @@
 </template>
 
 <script>
+import { sanitizeHtml } from '@/utils/sanitizeHtml';
+
 export default {
     data() {
         return {
@@ -110,7 +112,10 @@ export default {
                 text: 'Progetto del corso di Big Data. Analisi di paper inerenti al COVID volta all\'estrazione di parole chiave. <br> Repo disponibile al link: <a href="https://gitlab.com/moneletizi/covid-papers-analysis">https://gitlab.com/moneletizi/covid-papers-analysis</a>' ,
                 scope: 'Tecnologie e ambito principale: Big Data -> Spark, Hadooop'
             }]
-        }      
+        }
+    },
+    methods: {
+        sanitizeHtml,
     }
 }
 </script>

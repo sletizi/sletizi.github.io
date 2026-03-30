@@ -54,12 +54,11 @@ export default {
       ]
     }),
     methods:{
-        openMailProgram: function(){
-
-        },
          openInNewTab:function(url) {
-          var win = window.open(url, '_blank');
-          win.focus();
+          const win = window.open(url, '_blank', 'noopener,noreferrer');
+          if (win) {
+            win.opener = null;
+          }
         }
     }
   }

@@ -32,8 +32,8 @@
                 height="100%"
               />
             </v-container>
-            <v-card-title v-html="pic.title" class="justify-center"></v-card-title>
-            <v-card-title v-html="pic.place + ' - ' + pic.date" class="justify-center"></v-card-title>
+            <v-card-title v-html="sanitizeHtml(pic.title)" class="justify-center"></v-card-title>
+            <v-card-title v-html="sanitizeHtml(`${pic.place} - ${pic.date}`)" class="justify-center"></v-card-title>
           </v-card>
         </v-col>
       </v-row>
@@ -42,12 +42,16 @@
   
   <script>
   import imported_pictures from '@/data/picture.json';
+  import { sanitizeHtml } from '@/utils/sanitizeHtml';
   
   export default {
     data() {
       return {
         imported_pictures
       };
+    },
+    methods: {
+      sanitizeHtml,
     }
   };
   </script>

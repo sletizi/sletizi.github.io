@@ -53,7 +53,7 @@
                     <span
                         class="font-weight-light ma-5 mb-10 pa-5"
                         :class="[$vuetify.breakpoint.smAndDown ? 'display-1.5' : 'display-1']" 
-                        v-html="interest.quote_it"                  
+                        v-html="sanitizeHtml(interest.quote_it)"                  
                     />
                 </v-row>
             </v-col>
@@ -64,6 +64,8 @@
   </v-container>     
 </template>
 <script>
+import { sanitizeHtml } from '@/utils/sanitizeHtml';
+
 export default {
     data(){
         return {
@@ -84,6 +86,9 @@ export default {
                 color:'#d4d9d2'
             }]
         }
+    },
+    methods: {
+        sanitizeHtml,
     }
 }
 </script>

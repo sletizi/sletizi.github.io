@@ -27,6 +27,7 @@
           :key="item.icon"
           :href="item.href && !item.to ? item.href : undefined"
           :target="item.target || null"
+          :rel="item.rel || null"
           text
           @click="handleClick($event, item)"
 
@@ -49,6 +50,7 @@
             :key="item.icon"
             :href="item.href && !item.to ? item.href : undefined"
             :target="item.target || null"
+            :rel="item.rel || null"
             @click="handleClick($event, item)"
             >
             <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -84,7 +86,8 @@ export default {
           icon: "mdi-file-account",
           title: "CV",
           href: "https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing", 
-          target: "_blank"
+          target: "_blank",
+          rel: "noopener noreferrer"
         },
         {
           icon: "mdi-email",

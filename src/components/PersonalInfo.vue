@@ -13,7 +13,9 @@
                 v-bind:css="false"
             >-->
                 <v-container fill-height>                  
-                    <v-row align="center" justify="center"> <h1 class="personalInfoText" v-html="'Simone <br> Letizi'"></h1> </v-row>
+                    <v-row align="center" justify="center">
+                        <h1 class="personalInfoText">Simone<br>Letizi</h1>
+                    </v-row>
                 </v-container>
             <!--</transition>-->
             </v-col> 

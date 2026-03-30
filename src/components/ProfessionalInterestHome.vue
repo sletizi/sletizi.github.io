@@ -27,7 +27,7 @@
 
               <h3
                 class="font-weight-black mb-4 text-uppercase"
-                v-html="title"
+                v-html="sanitizeHtml(title)"
                 align="center"
               ></h3>
               <!--
@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import { sanitizeHtml } from '@/utils/sanitizeHtml';
+
 export default {
     data() {
         return {
@@ -69,7 +71,10 @@ export default {
                 text: 'Da riempire',
             },
           ]
-        }      
+        }
+    },
+    methods: {
+        sanitizeHtml,
     }
 }
 </script>
