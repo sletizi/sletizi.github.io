@@ -14,152 +14,227 @@
         <v-row
             align="center"
             justify="center">
-            <v-col
-            cols="12"
-            md="6"
-            xs="12">
-                <v-layout>
-                    <transition name="fade"></transition>
-                    <tags-ball v-if="showBall"
-                        class="center"
-                        v-bind:style='{"border":"0px solid black"}' 
-                        :width="500"
-                        :height="500"
-                        :tags='skillsName'
-                        font="30px monaco"
-                        :radius="[$vuetify.breakpoint.smAndDown ? 180 : 180]"
-                        color="#535354"/>
-                        <v-img v-else
-                            src="@/assets/google_cite.jpg"
-                            width="auto"
-                            height="auto"
-                            
-                            style="opacity: 0.8;"
-                        ></v-img> 
-                </v-layout>
-            </v-col>
+
+            <!-- SINISTRA: loghi recenti, e sotto la sfera dei tag -->
             <v-col
                 cols="12"
                 md="6"
-                xs="12"
-
-                >
-                <v-container > 
+                xs="12">
+                <v-container>
                     <v-divider></v-divider>
                         Utilizzati di recente
                         <v-icon class="mx-4">mdi-star</v-icon>
                     <v-divider></v-divider>
-                    <v-row v-for="(skillsRow, nr) in skillsChuncked" :key="nr">
+
+                    <v-row justify="center">
                         <v-col
                             align="center"
-                            v-for="(skill, nc) in skillsRow" 
-                            :key="nc">
-                            <div>
-                                <v-img contain :src="skill.logo_url" width='100' height='50'/>
-                            </div> 
-                        </v-col> 
+                            cols="4"
+                            v-for="skill in tech_skills"
+                            :key="skill.name">
+                            <a
+                                :href="skill.site"
+                                :title="skill.name"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="tech-logo">
+                                <v-img contain :src="skill.logo_url" :alt="skill.name" width='100' height='50'/>
+                            </a>
+                        </v-col>
                     </v-row>
+
+                    <div class="tagcloud-wrapper">
+                        <span ref="cloud" class="tagcloud"></span>
+                    </div>
                 </v-container>
-                
+            </v-col>
+
+            <!-- DESTRA: immagine -->
+            <v-col
+                cols="12"
+                md="6"
+                xs="12">
+                <v-img
+                    src="@/assets/google_cite.webp"
+                    alt="Once you've worked as a software engineer long enough, you realize tools do not matter as much. Tools come and go. Things change. But fundamentals stay forever."
+                    width="auto"
+                    height="auto"
+                    style="opacity: 0.8;"
+                ></v-img>
             </v-col>
         </v-row>
 
-    </v-container>    
+    </v-container>
 </template>
 
 <script>
-//https://www.npmjs.com/package/vue-tags-ball/v/1.0.0
-import TagsBall from 'vue-tags-ball'
+// https://github.com/cong-min/TagCloud - sfera 3D in CSS transform, zero dipendenze
+import TagCloud from 'TagCloud'
+
 export default {
     data() {
         return {
-            showBall: true,
+            cloud: null,
             tech_skills: [
                 {
                     name:"PowerBI",
-                    site:"",
+                    site:"https://powerbi.microsoft.com/",
                     logo_url:require('../assets/techs/powerbi.png'),
                 },
                 {
                     name:"Git",
-                    site:"",
+                    site:"https://git-scm.com/",
                     logo_url:require('../assets/techs/git.png'),
                 },
                 {
                     name:"SQL",
-                    site:"",
+                    site:"https://it.wikipedia.org/wiki/SQL",
                     logo_url:require('../assets/techs/sql.png'),
                 },
                 {
                     name:"GCP",
-                    site:"",
+                    site:"https://cloud.google.com/",
                     logo_url:require('../assets/techs/GCP.png'),
                 },
                 {
                     name:"dbt",
-                    site:"",
+                    site:"https://www.getdbt.com/",
                     logo_url:require('../assets/techs/dbt.png'),
                 },
                 {
+                    name:"Databricks",
+                    site:"https://www.databricks.com/",
+                    logo_url:require('../assets/techs/databricks.svg'),
+                },
+                {
                     name:"AWS",
-                    site:"",
+                    site:"https://aws.amazon.com/",
                     logo_url:require('../assets/techs/AWS.png'),
                 },
                 {
-                    name:"Pandas",
-                    site:"",
-                    logo_url:require('../assets/techs/pandas.png'),
-                },
-                {
                     name:"Tableau",
-                    site:"",
+                    site:"https://www.tableau.com/",
                     logo_url:require('../assets/techs/tableau.svg'),
                 },
                 {
                     name:"Python",
-                    site:"",
+                    site:"https://www.python.org/",
                     logo_url:require('../assets/techs/python.png'),
                 }]
-                
 
-        }      
-    },
-    components:{
-            "tags-ball":TagsBall
-    },
-    methods: {
-        subArrays: function (size, array) {
-            const chunked_arr = [];
-            let index = 0;
-            while (index < array.length) {
-                chunked_arr.push(array.slice(index, size + index));
-                index += size;
-            }
-            return chunked_arr;
+
         }
     },
     computed:{
-        skillsName () {
-            return this.tech_skills.map( t => t.name)
-        },
-        skillsChuncked(){
-            var split = this.subArrays(3,this.tech_skills)
-            return split
-        } 
-    }, mounted() {
-    setTimeout(() => {
-      this.showBall = false;
-    }, 5000); // 5 secondi
-  },
+        // i tag della sfera sono link veri: TagCloud li inserisce come HTML
+        // (useHTML), e le stringhe sono tutte definite qui sopra
+        cloudTags () {
+            return this.tech_skills.map(t =>
+                `<a href="${t.site}" target="_blank" rel="noopener noreferrer">${t.name}</a>`
+            )
+        }
+    },
+    mounted() {
+        this.cloud = TagCloud(this.$refs.cloud, this.cloudTags, {
+            radius: this.$vuetify.breakpoint.smAndDown ? 110 : 150,
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
+            direction: 135,
+            keep: true,
+            useHTML: true
+        })
+
+        // maxSpeed accetta solo 'slow' | 'normal' | 'fast' (0.5 | 1 | 2):
+        // 'fast' era il doppio, qui la alzo solo del 40%
+        this.cloud.maxSpeed = 1.4
+    },
+    beforeDestroy() {
+        if (this.cloud) {
+            this.cloud.destroy()
+        }
+    },
 }
 </script>
 <style scoped>
-.center {
-    margin: auto;
-    height: 70%;
-    width: 70%;
-    max-width: 500px;
-    max-height: 500px;
+.tech-logo {
+    display: inline-block;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+.tech-logo:hover,
+.tech-logo:focus-visible {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.tech-logo:focus-visible {
+    outline: 2px solid #5B879B;
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
+.tagcloud-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    /* riservo lo spazio della sfera: senza, il contenuto sotto sobbalza
+       quando TagCloud finisce di montare */
+    min-height: 320px;
+}
+
+@media (max-width: 960px) {
+    .tech-logo {
+    display: inline-block;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.tech-logo:hover,
+.tech-logo:focus-visible {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.tech-logo:focus-visible {
+    outline: 2px solid #5B879B;
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
+.tagcloud-wrapper {
+        min-height: 240px;
+        margin-top: 24px;
+    }
+}
+</style>
+
+<style>
+/* non scoped: gli span li crea TagCloud a runtime, fuori dallo scope del componente */
+.tagcloud {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #4A4F4C;
+}
+
+@media (max-width: 960px) {
+    .tagcloud {
+        font-size: 15px;
+    }
+}
+
+.tagcloud--item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tagcloud--item a:hover,
+.tagcloud--item a:focus-visible {
+    color: #5B879B;
+    text-decoration: underline;
+}
 </style>

@@ -25,9 +25,9 @@
             xs="12"
             class="no_padding">
                 <div>
-                    <v-img src="../assets/me_b&w.jpg"/>
+                    <v-img src="../assets/me_b&w.webp"/>
                 </div>
-                <!--<div :style="{'background-image': '../assets/me_b&w.jpg'}"/>-->
+                <!--<div :style="{'background-image': '../assets/me_b&w.webp'}"/>-->
             </v-col>   
         </v-row>
     </v-container>

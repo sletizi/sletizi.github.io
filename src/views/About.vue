@@ -20,6 +20,14 @@ import CustomButton from '../components/CustomButton'
 import Certifications from '../components/Certifications'
 
 export default{
+    metaInfo: {
+        title: 'Su di me',
+        meta: [{
+            vmid: 'description',
+            name: 'description',
+            content: "Il percorso di Simone Letizi fra dati e insegnamento, le competenze tecniche, le certificazioni e la vita fuori dallo schermo."
+        }]
+    },
     components : {
         'personal-info' : PersonalInfo,
         'tech-skills' : TechSkills,

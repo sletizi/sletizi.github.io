@@ -3,7 +3,7 @@
         "date": 2023,
         "tech_description":"Data Analytics",
         "name":"SpotiStats",
-        "logo_file":"logo_spotistats.png",
+        "logo_file":"logo_spotistats.webp",
         "short_description":"SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.",
         "description": "<p>SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.</p><p>🎯 Obiettivi del progetto:</p><ul><li>Unificare e centralizzare tutti i dati di ascolto provenienti da Spotify</li><li>Costruire una dashboard interattiva in Power BI per esplorare il comportamento musicale nel tempo</li><li>Definire e calcolare KPI ad hoc per un’analisi approfondita</li></ul>",
         "pdf":"",
@@ -18,17 +18,17 @@
         ],
         "github":"https://github.com/sletizi/spotidata",
         "screenshots":[
-            "spotistats_1.png",
-            "spotistats_2.png",
-            "spotistats_3.png",
-            "spotistats_4.png"
+            "spotistats_1.webp",
+            "spotistats_2.webp",
+            "spotistats_3.webp",
+            "spotistats_4.webp"
         ]
     },
     {
         "date": 2025,
         "tech_description":"Business Intelligence",
         "name":"Power BI Guide",
-        "logo_file":"logo_pbi_guide.png",
+        "logo_file":"logo_pbi_guide.webp",
         "short_description":"Questo progetto raccoglie linee guida pratiche e approfondimenti per ottimizzare i report Power BI, migliorandone le prestazioni, la struttura e l’esperienza utente. La guida è organizzata in sezioni dedicate, ciascuna focalizzata su uno specifico aspetto dello sviluppo di report efficaci e performanti, con esempi pratici e suggerimenti avanzati. Documentazione disponibile al link <a href=\"https://sletizi.github.io/PowerBiGuide/#/\">https://sletizi.github.io/PowerBiGuide</a></p>",
         "description": "<p>Questo progetto raccoglie linee guida pratiche e approfondimenti per ottimizzare i report Power BI, migliorandone le prestazioni, la struttura e l’esperienza utente. La guida è organizzata in sezioni dedicate, ciascuna focalizzata su uno specifico aspetto dello sviluppo di report efficaci e performanti, con esempi pratici e suggerimenti avanzati.Documentazione disponibile al link <a href=\"https://sletizi.github.io/PowerBiGuide/#/\">https://sletizi.github.io/PowerBiGuide</a></p>",
         "pdf":"",
@@ -45,7 +45,7 @@
         "date": 2022,
         "tech_description":"Web App",
         "name":"Drop It!",
-        "logo_file":"logo_dropit.png",
+        "logo_file":"logo_dropit.webp",
         "short_description":"Progetto realizzato a scopo didattico come copia digitale del gioco originale 'Pass the bomb'",
 "description": "<p>Progetto realizzato a scopo didattico come copia digitale del gioco originale 'Pass the bomb'. Scorri le slide del pdf per capire come funziona o fai click sul link <a href=\"https://passalabomba.github.io\">passalabomba.github.io</a> per giocare.</p>",
         "pdf":"drop_it.pdf",
@@ -62,7 +62,7 @@
         "date": 2020,
         "tech_description":"Progressive Web App",
         "name":"Scanbage",
-        "logo_file":"logo_scanbage.png",
+        "logo_file":"logo_scanbage.webp",
         "short_description":"Scanbage è una piattaforma online con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti, esponendo le seguenti funzionalità: riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto; creazioni di case virtuali nelle quali, un gruppo di utenti, possa avere uno storico dei rifiuti gettati, il bidone corrispondente ad ogni rifiuto e delle statistiche per effettuare confronti tra utenti della stessa casa; elementi di gamification come: possibilità di acquisire premi, avanzamento nei livelli, visualizzazione di una classifica globale...",
         "description": "<p>Scanbage è una piattaforma online nata con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti.</p>L'applicazione permette:<ul><li>il riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto</li><li>la creazione di abitazioni virtuali da parte degli utenti</li><li>la memorizzazione dello storico dei rifiuti gettati per singolo utente</li><li>di conoscere l'informazione relativa alla colorazione dei bidoni a seconda della provincia in cui si trova</li><li>la consultazione di statistiche per effetture confronti tra gli utenti della casa</li></ul>sono introdotti inoltre elementi di gamification come:<ul><li>possibilità di acquisire premi</li><li>avanzamento nei livelli con video di sensibilizzazione ogni volta che si supera un nuovo livello</li><li>visualizzazione di una classifica globale</li></ul> <br> <p> 📄 Nel settembre 2021 il progetto è stato oggetto di una pubblicazione presentata a Roma alla conferenza GoodIT '21: Proceedings of the Conference on Information Technology for Social Good. La pubblicazione è disponibile al link <a href=\"https://dl.acm.org/doi/10.1145/3462203.3477056\">https://dl.acm.org/doi/10.1145/3462203.3477056</a></p>",
         "pdf":"scanbage.pdf",
@@ -77,18 +77,18 @@
         ],
         "github":"https://gitlab.com/gianluca.aguzzi/asw-19-project",
         "screenshots":[
-            "scanbage-pic1.png",
-            "scanbage-pic2.png",
-            "scanbage-pic3.png",
-            "scanbage-pic4.png",
-            "scanbage-pic5.png"
+            "scanbage-pic1.webp",
+            "scanbage-pic2.webp",
+            "scanbage-pic3.webp",
+            "scanbage-pic4.webp",
+            "scanbage-pic5.webp"
         ]
     },
     {
         "date": 2020,
         "name":"IntelliSerra",
         "tech_description":"Scala framework",
-        "logo_file":"logo_iserra.png",
+        "logo_file":"logo_iserra.webp",
         "description":"",
         "pdf":"intelliserra.pdf",
         "base64PDF":null,
@@ -98,7 +98,7 @@
             "Prolog"
         ],
         "github":"https://github.com/moneletizi94/IntelliSerra",
-        "screenshots":["intelliserra.png","intelliserra2.png"]
+        "screenshots":["intelliserra.webp","intelliserra2.webp"]
     },
     {
         "date": 2020,
@@ -122,7 +122,7 @@
         "date": 2018,
         "tech_description":"Android app",
         "name":"FUORICLASSE",
-        "logo_file":"logo_fuoriclasse.png",
+        "logo_file":"logo_fuoriclasse.webp",
         "short_description":"L’applicazione FuoriClasse è legata al settore scolastico e ha l’obiettivo principale di migliorare l’efficienza delle comunicazioni tra studenti e docenti accompagnatori di una gita scolastica.",
         "description":"<p>L’applicazione FuoriClasse è legata al settore scolastico e ha l’obiettivo principale di migliorare l’efficienza delle comunicazioni tra studenti e docenti accompagnatori di una gita scolastica.</p>",
         "pdf":"fuoriclasse.pdf",

@@ -1,4 +1,7 @@
 module.exports = {
+  // le sourcemap pesavano ~12 MB sul sito pubblicato
+  productionSourceMap: false,
+
   chainWebpack: config => {
     config.module
       .rule('vue')

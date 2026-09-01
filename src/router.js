@@ -1,9 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-import Contacts from "./views/Contact.vue";
-import Projects from "./views/Projects.vue"
+
+// Rotte secondarie caricate on demand: tengono fuori dal bundle iniziale
+// dipendenze pesanti come il viewer PDF della pagina progetti.
+const About = () => import(/* webpackChunkName: "about" */ "./views/About.vue");
+const Contacts = () => import(/* webpackChunkName: "contact" */ "./views/Contact.vue");
+const Projects = () => import(/* webpackChunkName: "projects" */ "./views/Projects.vue");
 
 Vue.use(VueRouter);
 
