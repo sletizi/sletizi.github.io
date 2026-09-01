@@ -10,7 +10,7 @@
         >
         <v-img
           cover
-          src="../assets/logos/logo.png"
+          src="../assets/logos/logo.webp"
           :class="{ 'rotate-logo': logoRotation }"
           @click="goHome"
           style="max-height: 50px; cursor: pointer;"

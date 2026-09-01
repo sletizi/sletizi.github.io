@@ -140,11 +140,23 @@
 
 <script>
 import projectsData from "@/data/projects.json";
-import VuePdfEmbed from "vue-pdf-embed/dist/vue2-pdf-embed";
 import { sanitizeHtml } from "@/utils/sanitizeHtml";
 
 export default {
-  components: { VuePdfEmbed },
+  metaInfo: {
+    title: 'Progetti',
+    meta: [{
+      vmid: 'description',
+      name: 'description',
+      content: "I progetti di Simone Letizi: data analytics, Power BI, app mobile e big data, con report e screenshot."
+    }]
+  },
+
+  // pdf.js pesa piu' di 1 MB: viene scaricato solo quando si apre
+  // un progetto che ha davvero un report da mostrare.
+  components: {
+    VuePdfEmbed: () => import(/* webpackChunkName: "pdf-viewer" */ "vue-pdf-embed/dist/vue2-pdf-embed"),
+  },
 
   data() {
     return {

@@ -3,23 +3,26 @@
     <custom_app_bar/>
     <router-view/>
     <customFooter/>
-  </v-app>  
+  </v-app>
 </template>
 
 <script>
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
+
 export default {
   name: 'App',
+  // og:image, description & co. stanno in public/index.html: devono essere
+  // statici per i crawler social. Qui resta solo il titolo del tab.
   metaInfo: {
-      title: 'Simone Letizi personal website',
-      meta:[
-        {
-          property: 'og:image', content: 'https://www.gelestatic.it/thimg/BFgVJh3VRzyYdT2ZBRwuz5SwvS0=/fit-in/960x540/https%3A//www.lastampa.it/image/contentid/policy%3A1.40042259%3A1616074774/cat-4348355_960_720.jpg%3Ff%3Ddetail_558%26h%3D720%26w%3D1280%26%24p%24f%24h%24w%3Dafbdd83'
-        }
-      ]      
-
-
+      // Ogni view dichiara il proprio titolo; la home non ne dichiara nessuno
+      // e ricade sul solo nome.
+      titleTemplate: (chunk) => (chunk ? chunk + ' · Simone Letizi' : 'Simone Letizi'),
+      meta: [{
+          vmid: 'description',
+          name: 'description',
+          content: "Il sito personale di Simone Letizi: i progetti su cui lavoro, il percorso fra dati e insegnamento, e un po' di vita fuori dallo schermo."
+      }]
   },
   components: {
     'custom_app_bar' : AppBar,

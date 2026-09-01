@@ -3,45 +3,45 @@
       <v-img
         :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
         :max-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-        src="../assets/room.jpeg"
-        class="position-relative"
+        src="../assets/room.webp"
+        class="position-relative hero"
+        gradient="to bottom, rgba(0,0,0,.5), rgba(0,0,0,.38) 45%, rgba(0,0,0,.62)"
       >
         <v-theme-provider dark>
           <v-container fill-height>
             <v-row
-              align="start"
-              justify="start"
-              class="white--text"
+              align="center"
+              justify="center"
+              class="white--text text-center"
             >
-              <v-col
-                class="white--text text-center"
-                cols="12"
-                tag="h1"
-              >
-                <v-row
-                  align="center"
-                  justify="center"
+              <v-col cols="12" class="hero-copy">
+                <h1
+                  class="font-weight-bold hero-name"
+                  :class="[$vuetify.breakpoint.smAndDown ? 'display-2' : 'display-4']"
                 >
-                  <v-btn
-                    icon
-                    fab
-                    outlined
-                    large
-                    class="scroll-down"
-                    @click="$vuetify.goTo('#about-me')"
-                    :class="{ 'at-bottom': movedToBottom }"
-                  >
-                    <v-icon large>mdi-chevron-down</v-icon>
-                  </v-btn>
-                </v-row>
+                  Simone Letizi
+                </h1>
               </v-col>
             </v-row>
+
+            <v-btn
+              icon
+              fab
+              outlined
+              large
+              class="scroll-down"
+              aria-label="Vai al contenuto"
+              @click="$vuetify.goTo('#about-me')"
+              :class="{ 'at-bottom': movedToBottom }"
+            >
+              <v-icon large>mdi-chevron-down</v-icon>
+            </v-btn>
           </v-container>
         </v-theme-provider>
       </v-img>
     </v-row>
   </template>
-  
+
 
   <script>
   export default {
@@ -57,13 +57,41 @@
     },
   };
   </script>
-  
-  <style>
+
+  <style scoped>
+.hero-copy {
+  animation: fade-up 1.1s ease-out both;
+}
+
+.hero-name {
+  letter-spacing: 2px !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy {
+    animation: none;
+  }
+}
+</style>
+
+<style>
   .scroll-down {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 50%;
+  bottom: 28%;
   transition: bottom 1s ease;
   color: white;
   z-index: 10;
@@ -71,7 +99,7 @@
 
 /* Quando arriva in fondo */
 .scroll-down.at-bottom {
-  bottom: 12vh;
+  bottom: 8vh;
   animation: bounce 2s infinite;
 }
 
@@ -88,5 +116,5 @@
   }
 }
 
-  
+
 </style>

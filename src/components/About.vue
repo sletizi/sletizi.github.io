@@ -34,7 +34,7 @@
                 </v-responsive>
 
                 <v-avatar class="elevation-12 mb-12" size="150">
-                    <v-img src="../assets/ME_2024.jpg"></v-img>
+                    <v-img src="../assets/ME_2024.webp"></v-img>
                 </v-avatar>
 
                 <div></div>
@@ -91,7 +91,7 @@
 }
 
 .about-background {
-    background-image: url('@/assets/landscape.jpg');
+    background-image: url('@/assets/landscape.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
