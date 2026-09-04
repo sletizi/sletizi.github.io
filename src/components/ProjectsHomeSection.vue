@@ -11,59 +11,66 @@
             <v-divider></v-divider>
           </v-responsive>
 
-          <v-row>
+          <v-row justify="center">
             <v-col
-              v-for="({src, title, text, scope}, i) in projects"
-              :key="i"
+              v-for="project in projects"
+              :key="project.name"
               cols="12"
               md="6"
-              fill-height
-              align-self="stretch"
             >
-
-              <v-container fill-height>
               <v-card
-                height='100%' 
-                style="position: relative"
-                class="py-12 px-4"
+                class="d-flex flex-column mx-auto text-center"
+                height="100%"
+                max-width="520"
                 color="grey lighten-5"
                 elevation="12"
                 shaped
               >
-                <v-theme-provider dark>
-                  <div>
-                    <v-avatar
-                    class="elevation-12 mb-12"
-                    size="160"
-                    radius="10px">  
-                        <v-img
-                        contain
-                            :src="require(`../assets/projects_logos/${src}`)" 
-                            class="white--text align-end"
-                            />
-                    </v-avatar>    
-                  </div>
-                </v-theme-provider>
+                <div class="pt-10 pb-4">
+                  <v-avatar class="elevation-12" size="160">
+                    <v-img
+                      contain
+                      :src="logoOf(project)"
+                      :alt="project.name"
+                    />
+                  </v-avatar>
+                </div>
 
-                <v-card-title
-                  class="justify-center font-weight-black text-uppercase"
-                  v-html="sanitizeHtml(title)"
-                ></v-card-title>
+                <v-card-title class="justify-center font-weight-black text-uppercase">
+                  {{ project.name }}
+                </v-card-title>
 
                 <v-card-subtitle>
-                  {{scope}}
+                  Tecnologie e ambito principale: {{ project.tech_description }}
                 </v-card-subtitle>
 
                 <v-card-text
-                  class="subtitle-1"
-                  v-html="sanitizeHtml(text)"
+                  class="subtitle-1 flex-grow-1"
+                  v-html="sanitizeHtml(project.short_description)"
+                ></v-card-text>
+
+                <div
+                  v-if="project.collaborators && project.collaborators.length"
+                  class="caption grey--text text--darken-1 px-4 pb-3"
                 >
-                </v-card-text>
+                  <v-icon x-small class="mr-1">mdi-account-group</v-icon>
+                  Con {{ project.collaborators.join(', ') }}
+                </div>
+
+                <v-card-actions class="justify-center pb-8">
+                  <v-btn
+                    v-if="project.github"
+                    :href="project.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    outlined
+                    color="grey darken-1"
+                  >
+                    <v-icon left>{{ repoIcon(project.github) }}</v-icon>
+                    {{ repoLabel(project.github) }}
+                  </v-btn>
+                </v-card-actions>
               </v-card>
-              </v-container>
-
-              
-
             </v-col>
 
           </v-row>
@@ -82,40 +89,35 @@
 </template>
 
 <script>
+import projectsData from '@/data/projects.json';
 import { sanitizeHtml } from '@/utils/sanitizeHtml';
 
+// I progetti da mettere in vetrina sulla home: i dati (testo, logo, repo)
+// arrivano da projects.json, cosi' restano allineati alla pagina Progetti.
+const IN_VETRINA = ['SpotiStats', 'Scanbage'];
+
 export default {
-    data() {
-        return {
-            projects: [
-            {
-                src: 'logo_spotistats.png',
-                title: 'SpotiStats',
-                text: 'SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.',
-                scope: 'Tecnologie e ambito principale: Data Analytics'
-            },
-            {
-                src: 'logo_scanbage.png',
-                title: 'Scanbage',
-                text: 'Scanbage è un’app al servizio del cittadino, con l’idea di supportarlo in una raccolta differenziata più responsabile.<br> Sviluppata insieme a: <br> Andrea Petreti, Gianluca Aguzzi, Marta Luffarelli ' ,
-                scope: 'Tecnologie e ambito principale: Progressive Web App'
-            },
-            {
-                src: 'logo_iserra.png',
-                title: 'IntelliSerra',
-                text: 'Framework per la realizzazione di un\'infrastruttura a supporto di una serra intelligente (smart greenhouse). <br> Sviluppata insieme a: <br> Ylenia Battistini, Marta Luffarelli, Andrea Petreti <br> Repo disponibile al link: <a href="https://github.com/moneletizi94/IntelliSerra">https://github.com/moneletizi94/IntelliSerra</a>',
-                scope: 'Tecnologie e ambito principale: Scala framework'
-            },
-            {
-                src: 'logo_covid_paper_analysis.png',
-                title: 'COVID papers analysis',
-                text: 'Progetto del corso di Big Data. Analisi di paper inerenti al COVID volta all\'estrazione di parole chiave. <br> Repo disponibile al link: <a href="https://gitlab.com/moneletizi/covid-papers-analysis">https://gitlab.com/moneletizi/covid-papers-analysis</a>' ,
-                scope: 'Tecnologie e ambito principale: Big Data -> Spark, Hadooop'
-            }]
+    computed: {
+        projects() {
+            return IN_VETRINA
+                .map(name => projectsData.find(project => project.name === name))
+                .filter(Boolean)
         }
     },
     methods: {
         sanitizeHtml,
+        logoOf(project) {
+            return require(`../assets/projects_logos/${project.logo_file}`)
+        },
+        isGitlab(url) {
+            return url.includes('gitlab')
+        },
+        repoIcon(url) {
+            return this.isGitlab(url) ? 'mdi-gitlab' : 'mdi-github'
+        },
+        repoLabel(url) {
+            return this.isGitlab(url) ? 'Vedi su GitLab' : 'Vedi su GitHub'
+        }
     }
 }
 </script>

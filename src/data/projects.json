@@ -4,7 +4,7 @@
         "tech_description":"Data Analytics",
         "name":"SpotiStats",
         "logo_file":"logo_spotistats.webp",
-        "short_description":"SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.",
+        "short_description":"Un progetto di data analytics sulla mia cronologia di ascolto Spotify: una Spotify Wrapped disponibile tutto l’anno, dettagliata e personalizzabile.",
         "description": "<p>SpotiStats è un progetto di data analytics nato con l’obiettivo di analizzare la cronologia di ascolto personale su Spotify, offrendo una panoramica dettagliata e interattiva simile a quella fornita da Spotify Wrapped, ma disponibile in qualsiasi momento dell’anno e personalizzabile.</p><p>🎯 Obiettivi del progetto:</p><ul><li>Unificare e centralizzare tutti i dati di ascolto provenienti da Spotify</li><li>Costruire una dashboard interattiva in Power BI per esplorare il comportamento musicale nel tempo</li><li>Definire e calcolare KPI ad hoc per un’analisi approfondita</li></ul>",
         "pdf":"",
         "base64PDF":null,
@@ -16,6 +16,7 @@
             "MinIO",
             "Postgres"
         ],
+        "collaborators":[],
         "github":"https://github.com/sletizi/spotidata",
         "screenshots":[
             "spotistats_1.webp",
@@ -38,6 +39,7 @@
             "DAX",
             "M"
         ],
+        "collaborators":[],
         "github":"https://github.com/sletizi/PowerBiGuide",
         "screenshots":[]
     },
@@ -55,6 +57,7 @@
             "Vuetify",
             "Python"
         ],
+        "collaborators":[],
         "github":"https://github.com/sletizi/passalabomba",
         "screenshots":[]
     },
@@ -63,7 +66,7 @@
         "tech_description":"Progressive Web App",
         "name":"Scanbage",
         "logo_file":"logo_scanbage.webp",
-        "short_description":"Scanbage è una piattaforma online con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti, esponendo le seguenti funzionalità: riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto; creazioni di case virtuali nelle quali, un gruppo di utenti, possa avere uno storico dei rifiuti gettati, il bidone corrispondente ad ogni rifiuto e delle statistiche per effettuare confronti tra utenti della stessa casa; elementi di gamification come: possibilità di acquisire premi, avanzamento nei livelli, visualizzazione di una classifica globale...",
+        "short_description":"Un’app che aiuta il cittadino nella raccolta differenziata: riconosce il rifiuto da una foto, tiene lo storico della casa e premia chi ricicla di più.",
         "description": "<p>Scanbage è una piattaforma online nata con l'obiettivo di sensibilizzare e di aiutare gli utenti nel riciclo dei rifiuti.</p>L'applicazione permette:<ul><li>il riconoscimento della tipologia di rifiuto attraverso l'inserimento di una foto</li><li>la creazione di abitazioni virtuali da parte degli utenti</li><li>la memorizzazione dello storico dei rifiuti gettati per singolo utente</li><li>di conoscere l'informazione relativa alla colorazione dei bidoni a seconda della provincia in cui si trova</li><li>la consultazione di statistiche per effetture confronti tra gli utenti della casa</li></ul>sono introdotti inoltre elementi di gamification come:<ul><li>possibilità di acquisire premi</li><li>avanzamento nei livelli con video di sensibilizzazione ogni volta che si supera un nuovo livello</li><li>visualizzazione di una classifica globale</li></ul> <br> <p> 📄 Nel settembre 2021 il progetto è stato oggetto di una pubblicazione presentata a Roma alla conferenza GoodIT '21: Proceedings of the Conference on Information Technology for Social Good. La pubblicazione è disponibile al link <a href=\"https://dl.acm.org/doi/10.1145/3462203.3477056\">https://dl.acm.org/doi/10.1145/3462203.3477056</a></p>",
         "pdf":"scanbage.pdf",
         "base64PDF":null,
@@ -75,6 +78,7 @@
             "Mongodb",
             "express"
         ],
+        "collaborators":["Andrea Petreti","Gianluca Aguzzi","Marta Luffarelli"],
         "github":"https://gitlab.com/gianluca.aguzzi/asw-19-project",
         "screenshots":[
             "scanbage-pic1.webp",
@@ -97,6 +101,7 @@
             "Akka",
             "Prolog"
         ],
+        "collaborators":["Ylenia Battistini","Marta Luffarelli","Andrea Petreti"],
         "github":"https://github.com/moneletizi94/IntelliSerra",
         "screenshots":["intelliserra.webp","intelliserra2.webp"]
     },
@@ -115,6 +120,7 @@
             "Hadoop",
             "Tableau"
         ],
+        "collaborators":[],
         "github":"https://gitlab.com/moneletizi/covid-papers-analysis",
         "screenshots":[]
     },
@@ -133,6 +139,7 @@
             "Java",
             "Spring"
         ],
+        "collaborators":[],
         "github":"",
         "screenshots":[]
     }    
