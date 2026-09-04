@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">COMPETENZE TECNICHE </h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">{{ $t('techSkills.title') }}</h2>
 
           <v-responsive
             class="mx-auto mb-12"
@@ -51,7 +51,7 @@
                 xs="12">
                 <v-img
                     src="@/assets/google_cite.webp"
-                    alt="Once you've worked as a software engineer long enough, you realize tools do not matter as much. Tools come and go. Things change. But fundamentals stay forever."
+                    :alt="$t('techSkills.quoteAlt')"
                     width="auto"
                     height="auto"
                     style="opacity: 0.8;"

@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h2 class="display-2 font-weight-bold mb-3 text-center"> ISTRUZIONE &amp; ESPERIENZE LAVORATIVE </h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-center text-uppercase">{{ $t('experience.title') }}</h2>
 
           <v-responsive
             class="mx-auto mb-8"
@@ -15,10 +15,9 @@
             <v-col
                 cols="12"
                 md="7">
-                <p class="body-1 grey--text text--darken-2 text-center text-md-left mb-5">
-                    Due strade che corrono in parallelo: il percorso nei <strong>dati</strong> e quello della
-                    <strong>docenza</strong>. Scegli quale seguire.
-                </p>
+                <p
+                    class="body-1 grey--text text--darken-2 text-center text-md-left mb-5"
+                    v-html="sanitizeHtml($t('experience.intro'))"></p>
 
                 <div class="d-flex flex-wrap justify-center justify-md-start">
                     <v-chip
@@ -27,7 +26,7 @@
                         :text-color="allSelected ? 'white' : 'grey darken-2'"
                         @click="selectAll">
                         <v-icon left small>mdi-infinity</v-icon>
-                        Tutto
+                        {{ $t('experience.all') }}
                     </v-chip>
                     <v-chip
                         v-for="track in trackList"
@@ -43,7 +42,7 @@
                 </div>
 
                 <div class="caption grey--text mt-3 text-center text-md-left">
-                    {{ filteredItems.length }} tappe su {{ items.length }}
+                    {{ $t('experience.count', { shown: filteredItems.length, total: items.length }) }}
                 </div>
             </v-col>
 
@@ -52,7 +51,7 @@
                 md="5"
                 align="center"
                 justify="center">
-                <img src="../assets/me_action_figure.webp" alt="Action figure di Simone Letizi" class="action-figure" />
+                <img src="../assets/me_action_figure.webp" :alt="$t('experience.actionFigureAlt')" class="action-figure" />
             </v-col>
         </v-row>
 
@@ -100,7 +99,7 @@
                                 rel="noopener noreferrer"
                                 class="org-link">{{ node.org }}<v-icon x-small class="org-link__icon">mdi-open-in-new</v-icon></a>
                             <span v-else>{{ node.org }}</span>
-                            <span class="ml-1">&middot; {{ node.roles.length }} ruoli</span>
+                            <span class="ml-1">&middot; {{ $t('experience.roles', { count: node.roles.length }) }}</span>
                         </v-card-subtitle>
                         <v-card-text class="pb-4">
                             <div
@@ -122,7 +121,7 @@
                                     <div class="caption font-weight-bold period-inline mt-1">
                                         {{ periodOf(role) }}
                                         <span v-if="role.promotion" class="promo-badge ml-1">
-                                            <v-icon x-small>mdi-arrow-up-bold</v-icon>promozione
+                                            <v-icon x-small>mdi-arrow-up-bold</v-icon>{{ $t('experience.promotion') }}
                                         </span>
                                     </div>
                                     <v-chip
@@ -131,7 +130,7 @@
                                         class="mt-2"
                                         color="green lighten-5"
                                         text-color="green darken-2">
-                                        in corso
+                                        {{ $t('experience.current') }}
                                     </v-chip>
                                     <div v-if="role.description" class="body-2 grey--text text--darken-2 mt-1">
                                         {{ role.description }}
@@ -169,7 +168,7 @@
                                 class="mb-2"
                                 color="green lighten-5"
                                 text-color="green darken-2">
-                                in corso
+                                {{ $t('experience.current') }}
                             </v-chip>
                             <div v-if="node.roles[0].description" class="body-2 grey--text text--darken-2">
                                 {{ node.roles[0].description }}
@@ -182,22 +181,120 @@
 
         <v-card v-else flat class="pa-8 text-center grey--text mt-6">
             <v-icon size="48" color="grey lighten-1">mdi-filter-remove-outline</v-icon>
-            <div class="body-1 mt-3">Nessun percorso selezionato.</div>
-            <v-btn text color="primary" class="mt-2" @click="selectAll">Mostra tutto</v-btn>
+            <div class="body-1 mt-3">{{ $t('experience.empty') }}</div>
+            <v-btn text color="primary" class="mt-2" @click="selectAll">{{ $t('experience.showAll') }}</v-btn>
         </v-card>
 
     </v-container>
 </template>
 
 <script>
+import { DEFAULT_LOCALE, bcp47 } from '@/i18n'
+import { sanitizeHtml } from '@/utils/sanitizeHtml'
+
+// Solo la struttura del percorso: ruolo, ente e descrizione stanno nelle
+// traduzioni, sotto experience.items.<id>.
+// group: ruoli consecutivi nella stessa azienda, uniti in un'unica tappa.
+// Lo stage in Data Reply non ce l'ha: e' una permanenza separata, con
+// Iconsulting in mezzo.
+const EXPERIENCES = [
+    {
+        id: 'tuidi',
+        track: 'data',
+        url: 'https://www.tuidi.ai/',
+        from: new Date(2025, 9),
+        current: true
+    },
+    {
+        id: 'nolfi-apolloni',
+        track: 'teaching',
+        url: 'https://www.liceonolfi-apolloni.edu.it/',
+        from: new Date(2024, 10),
+        to: new Date(2025, 3)
+    },
+    {
+        id: 'reply-senior',
+        track: 'data',
+        url: 'https://www.reply.com/data-reply/it/',
+        group: 'data-reply',
+        promotion: true,
+        from: new Date(2024, 2),
+        // fra Data Reply e Tuidi c'e' un mese di stacco: senza il to
+        // esplicito il concatenamento tirerebbe la fine a ottobre
+        to: new Date(2025, 8)
+    },
+    {
+        id: 'reply-consultant',
+        track: 'data',
+        url: 'https://www.reply.com/data-reply/it/',
+        group: 'data-reply',
+        from: new Date(2023, 4)
+    },
+    {
+        id: 'iconsulting',
+        track: 'data',
+        url: 'https://www.iconsulting.com/',
+        from: new Date(2021, 10)
+    },
+    {
+        id: 'fulcieri',
+        track: 'teaching',
+        url: 'https://www.liceocalboli.edu.it/',
+        from: new Date(2021, 8)
+    },
+    {
+        id: 'ragazze-digitali',
+        track: 'teaching',
+        url: 'https://www.ingmo.unimore.it/it/DE%26I%20-%20Ragazze%20Digitali',
+        from: new Date(2021, 6)
+    },
+    {
+        id: 'pon-coding-lab',
+        track: 'teaching',
+        url: 'https://www.itbramantegenga.edu.it/',
+        from: new Date(2021, 3)
+    },
+    {
+        id: 'laurea-magistrale',
+        track: 'education',
+        url: 'https://www.unibo.it/it/campus-cesena',
+        from: new Date(2021, 2)
+    },
+    {
+        id: 'stage-reply',
+        track: 'data',
+        url: 'https://www.reply.com/data-reply/it/',
+        from: new Date(2020, 9),
+        // data reale: fra la fine dello stage e Iconsulting c'e' un
+        // buco, quindi il concatenamento automatico qui non vale
+        to: new Date(2021, 2)
+    },
+    {
+        id: 'tutor-unibo',
+        track: 'teaching',
+        url: 'https://www.unibo.it/it/campus-cesena',
+        from: new Date(2019, 1)
+    },
+    {
+        id: 'laurea-triennale',
+        track: 'education',
+        url: 'https://www.unibo.it/it/campus-cesena',
+        from: new Date(2018, 6)
+    }
+]
+
 export default {
     data(){
         return {
-            selected: ['data', 'teaching', 'education'],
-            tracks: {
+            selected: ['data', 'teaching', 'education']
+        }
+    },
+    computed: {
+        tracks(){
+            return {
                 data: {
                     key: 'data',
-                    label: 'Data Engineering',
+                    label: this.$t('experience.tracks.data'),
                     icon: 'mdi-database',
                     color: '#5B879B',
                     side: 'left',
@@ -206,7 +303,7 @@ export default {
                 },
                 education: {
                     key: 'education',
-                    label: 'Formazione',
+                    label: this.$t('experience.tracks.education'),
                     icon: 'mdi-school',
                     color: '#4A4F4C',
                     side: 'left',
@@ -215,141 +312,25 @@ export default {
                 },
                 teaching: {
                     key: 'teaching',
-                    label: 'Docenza',
+                    label: this.$t('experience.tracks.teaching'),
                     icon: 'mdi-human-male-board',
                     color: '#BFA89E',
                     side: 'right',
                     // progetti singoli, con buchi in mezzo: niente concatenamento
                     chained: false
                 }
-            },
-            // group: ruoli consecutivi nella stessa azienda, uniti in un'unica
-            // tappa. Lo stage in Data Reply non ce l'ha: e' una permanenza
-            // separata, con Iconsulting in mezzo.
-            items: [
-                {
-                    id: 'tuidi',
-                    track: 'data',
-                    role: 'Senior Data Engineer',
-                    org: 'Tuidi',
-                    url: 'https://www.tuidi.ai/',
-                    from: new Date(2025, 9),
-                    current: true,
-                    description: ''
-                },
-                {
-                    id: 'nolfi-apolloni',
-                    track: 'teaching',
-                    role: 'Docente — «Percorsi di orientamento e formazione per il potenziamento delle competenze STEM e digitali»',
-                    org: 'Liceo «Nolfi-Apolloni», Fano',
-                    url: 'https://www.liceonolfi-apolloni.edu.it/',
-                    from: new Date(2024, 10),
-                    to: new Date(2025, 3),
-                    description: ''
-                },
-                {
-                    id: 'reply-senior',
-                    track: 'data',
-                    role: 'Analytics Engineer · Senior Consultant',
-                    org: 'Data Reply IT',
-                    url: 'https://www.reply.com/data-reply/it/',
-                    group: 'data-reply',
-                    promotion: true,
-                    from: new Date(2024, 2),
-                    // fra Data Reply e Tuidi c'e' un mese di stacco: senza il
-                    // to esplicito il concatenamento tirerebbe la fine a ottobre
-                    to: new Date(2025, 8),
-                    description: ''
-                },
-                {
-                    id: 'reply-consultant',
-                    track: 'data',
-                    role: 'Analytics Engineer · Consultant',
-                    org: 'Data Reply IT',
-                    url: 'https://www.reply.com/data-reply/it/',
-                    group: 'data-reply',
-                    from: new Date(2023, 4),
-                    description: ''
-                },
-                {
-                    id: 'iconsulting',
-                    track: 'data',
-                    role: 'Business Analytics Specialist',
-                    org: 'Iconsulting S.p.A.',
-                    url: 'https://www.iconsulting.com/',
-                    from: new Date(2021, 10),
-                    description: ''
-                },
-                {
-                    id: 'fulcieri',
-                    track: 'teaching',
-                    role: 'Docente senior — «Sviluppo app e concetti di intelligenza artificiale»',
-                    org: 'Liceo Scientifico Fulcieri, Forlì',
-                    url: 'https://www.liceocalboli.edu.it/',
-                    from: new Date(2021, 8),
-                    description: ''
-                },
-                {
-                    id: 'ragazze-digitali',
-                    track: 'teaching',
-                    role: 'Docente senior — Ragazze Digitali, «Inventa la tua app con Kodular»',
-                    org: 'Progetto Ragazze Digitali',
-                    url: 'https://www.ingmo.unimore.it/it/DE%26I%20-%20Ragazze%20Digitali',
-                    from: new Date(2021, 6),
-                    description: 'Ideazione del programma, preparazione del materiale didattico e docenza in aula.'
-                },
-                {
-                    id: 'pon-coding-lab',
-                    track: 'teaching',
-                    role: 'Esperto esterno — progetto PON Coding Lab',
-                    org: 'Istituto Bramante Genga',
-                    url: 'https://www.itbramantegenga.edu.it/',
-                    from: new Date(2021, 3),
-                    description: 'Ideazione del programma, preparazione del materiale didattico e docenza in aula.'
-                },
-                {
-                    id: 'laurea-magistrale',
-                    track: 'education',
-                    role: 'Laurea Magistrale in Ingegneria e Scienze Informatiche',
-                    org: 'Università di Bologna — Campus di Cesena',
-                    url: 'https://www.unibo.it/it/campus-cesena',
-                    from: new Date(2021, 2),
-                    description: "Votazione 110 e lode. Studi focalizzati sull'analisi di grandi quantità di dati: Business Intelligence, Big Data, Data Mining e Text Mining."
-                },
-                {
-                    id: 'stage-reply',
-                    track: 'data',
-                    role: 'Stage — Log Analysis: Anomaly Detection',
-                    org: 'Data Reply IT',
-                    url: 'https://www.reply.com/data-reply/it/',
-                    from: new Date(2020, 9),
-                    // data reale: fra la fine dello stage e Iconsulting c'e' un
-                    // buco, quindi il concatenamento automatico qui non vale
-                    to: new Date(2021, 2),
-                    description: ''
-                },
-                {
-                    id: 'tutor-unibo',
-                    track: 'teaching',
-                    role: 'Tutor didattico — Programmazione di Sistemi Mobile',
-                    org: 'Università di Bologna — Campus di Cesena',
-                    url: 'https://www.unibo.it/it/campus-cesena',
-                    from: new Date(2019, 1),
-                    description: 'Lezioni frontali e attività di laboratorio.'
-                },
-                {
-                    id: 'laurea-triennale',
-                    track: 'education',
-                    role: 'Laurea in Ingegneria e Scienze Informatiche',
-                    org: 'Università di Bologna — Campus di Cesena',
-                    url: 'https://www.unibo.it/it/campus-cesena',
-                    from: new Date(2018, 6),
-                    description: 'Votazione 100/110.'
-                }
-            ]
-        }
-    },
-    computed: {
+            }
+        },
+        // la struttura arriva da EXPERIENCES, i testi dalle traduzioni: al
+        // cambio di lingua la timeline si riscrive da sola
+        items(){
+            return EXPERIENCES.map(item => ({
+                ...item,
+                role: this.$t('experience.items.' + item.id + '.role'),
+                org: this.$t('experience.items.' + item.id + '.org'),
+                description: this.optionalTranslation('experience.items.' + item.id + '.description')
+            }))
+        },
         trackList(){
             return [this.tracks.data, this.tracks.teaching, this.tracks.education]
         },
@@ -430,6 +411,13 @@ export default {
         }
     },
     methods: {
+        sanitizeHtml,
+        // non tutte le tappe hanno una descrizione: senza questo controllo
+        // $t restituirebbe la chiave e la card mostrerebbe il path
+        optionalTranslation(key){
+            const exists = this.$te(key) || this.$te(key, DEFAULT_LOCALE)
+            return exists ? this.$t(key) : ''
+        },
         isActive(key){
             return this.selected.includes(key)
         },
@@ -448,13 +436,13 @@ export default {
             return this.tracks[item.track].side
         },
         formatDate(date){
-            return date.toLocaleDateString('it-IT', { month: 'short', year: 'numeric' })
+            return date.toLocaleDateString(bcp47(this.$i18n.locale), { month: 'short', year: 'numeric' })
         },
         // vale sia per una tappa che per un singolo ruolo dentro una tappa:
         // il nodo porta gia' con se' la sua fine, l'item la prende da endDates
         periodOf(entry){
             const start = this.formatDate(entry.from)
-            if (entry.current) return start + ' — oggi'
+            if (entry.current) return start + ' — ' + this.$t('experience.today')
 
             const end = entry.to !== undefined ? entry.to : this.endDates[entry.id]
             return end ? start + ' — ' + this.formatDate(end) : start
