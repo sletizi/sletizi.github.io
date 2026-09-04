@@ -2,7 +2,7 @@
     <div class="about-background">
         <div class="overlay">
             <v-container class="text-center">
-                <h2 class="display-2 font-weight-bold mb-3">SU DI ME<!--ABOUT ME--></h2>
+                <h2 class="display-2 font-weight-bold mb-3 text-uppercase">{{ $t('about.title') }}</h2>
 
                 <v-responsive class="mx-auto mb-8" width="56">
                     <v-divider class="mb-1"></v-divider>
@@ -12,25 +12,21 @@
 
                 <v-responsive class="mr-6 ml-6 title font-weight-light mb-8"> <v-icon>mdi-hiking</v-icon>
 
-                    Natura, libertà e avventura: è così che ricarico le energie.
+                    {{ $t('about.nature') }}
                 </v-responsive>
-                <v-responsive class="mr-6 ml-6 title font-weight-light mb-8"> 
+                <v-responsive class="mr-6 ml-6 title font-weight-light mb-8">
                     <v-icon left>mdi-lightbulb-on-outline</v-icon>
-                    Mi piace dare spazio alla creatività: progettare, costruire, scrivere codice… ogni occasione è buona
-                    per creare qualcosa di nuovo.
+                    {{ $t('about.creativity') }}
                 </v-responsive>
 
                 <v-responsive class="mr-6 ml-6 title font-weight-light mb-8"> <v-icon left>mdi-chart-line</v-icon>
 
-                    Lavorare con i dati mi appassiona: credo nel loro potere di raccontare la realtà, di smentire le
-                    opinioni e fare luce sui fenomeni.
+                    {{ $t('about.data') }}
                 </v-responsive>
 
                 <v-responsive class="mr-6 ml-6 title font-weight-light mb-8"> <v-icon left>mdi-school</v-icon>
 
-                    Mi affascina il mondo dell’insegnamento e della formazione. Trovo stimolante e avvincente prendersi
-                    cura della formazione di coloro che saranno la nuova generazione di innovatori, oltre che cittadini
-                    del mondo.
+                    {{ $t('about.teaching') }}
                 </v-responsive>
 
                 <v-avatar class="elevation-12 mb-12" size="150">
@@ -41,7 +37,7 @@
 
                 <v-btn color="grey" to="/about" outlined large>
                     <span class="grey--text text--darken-1 font-weight-bold pulse">
-                        Scopri di più
+                        {{ $t('about.cta') }}
                     </span>
                 </v-btn>
             </v-container>

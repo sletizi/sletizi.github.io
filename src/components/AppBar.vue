@@ -37,6 +37,9 @@
         </v-btn>
       </v-toolbar-items>
 
+      <!-- TOGGLE LINGUA: sempre visibile, desktop e mobile -->
+      <language-switcher class="ml-4 mr-1" />
+
       <!-- MOBILE NAV -->
       <v-menu v-if="onMobile" class="hidden-md-and-up" left bottom>
         <template v-slot:activator="{ on }">
@@ -62,45 +65,54 @@
 </template>
 
 <script>
+import LanguageSwitcher from '@/components/LanguageSwitcher'
+
 export default {
+  components: {
+    'language-switcher': LanguageSwitcher
+  },
   data() {
     return {
-      logoRotation: false,
-      navItems: [
-        {
-          icon: "mdi-home",
-          title: "Home",
-          to: () => this.navigateIfNeeded('/'),
-        },
-        {
-          icon: "mdi-account",
-          title: "Su di me",
-          to: () => this.navigateIfNeeded('/about'),
-        },
-        {
-          icon: "mdi-brush",
-          title: "Progetti",
-          to: () => this.navigateIfNeeded('/projects'),
-        },
-        {
-          icon: "mdi-file-account",
-          title: "CV",
-          href: "https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing", 
-          target: "_blank",
-          rel: "noopener noreferrer"
-        },
-        {
-          icon: "mdi-email",
-          title: "Contatti",
-          to: () => this.$vuetify.goTo('#contact_me'),
-          href: "#contact_me"
-        }
-      ]
+      logoRotation: false
     };
   },
   computed: {
     onMobile() {
       return this.$vuetify.breakpoint.smAndDown;
+    },
+    // computed e non data: cosi' le voci si ritraducono da sole quando
+    // cambia la lingua
+    navItems() {
+      return [
+        {
+          icon: "mdi-home",
+          title: this.$t('nav.home'),
+          to: () => this.navigateIfNeeded('/'),
+        },
+        {
+          icon: "mdi-account",
+          title: this.$t('nav.about'),
+          to: () => this.navigateIfNeeded('/about'),
+        },
+        {
+          icon: "mdi-brush",
+          title: this.$t('nav.projects'),
+          to: () => this.navigateIfNeeded('/projects'),
+        },
+        {
+          icon: "mdi-file-account",
+          title: this.$t('nav.cv'),
+          href: "https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing",
+          target: "_blank",
+          rel: "noopener noreferrer"
+        },
+        {
+          icon: "mdi-email",
+          title: this.$t('nav.contacts'),
+          to: () => this.$vuetify.goTo('#contact_me'),
+          href: "#contact_me"
+        }
+      ];
     }
   },
   methods: {

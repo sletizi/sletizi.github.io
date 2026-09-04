@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+  <!--
+    Business Intelligence - illustrazione originale, palette del sito.
+    v-img ritaglia in cover: su desktop resta visibile il 67% centrale in
+    larghezza, su tablet il 63% centrale in altezza. Le card stanno dentro
+    x 230-980 / y 140-460, che e' l'intersezione dei due ritagli; fuori da
+    li' ci sono solo pattern e macchie di colore.
+  -->
+  <defs>
+    <pattern id="bi-dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.8" fill="#A1A499" opacity="0.28" />
+    </pattern>
+
+    <filter id="bi-card-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#4A4F4C" flood-opacity="0.13" />
+    </filter>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1200" height="600" fill="#DAD6CC" />
+  <rect width="1200" height="600" fill="url(#bi-dots)" />
+  <circle cx="86" cy="300" r="160" fill="#5B879B" opacity="0.10" />
+  <circle cx="1122" cy="168" r="128" fill="#BFA89E" opacity="0.22" />
+  <circle cx="1080" cy="486" r="74" fill="#5B879B" opacity="0.12" />
+
+  <!--
+    Tutto il gruppo e' rientrato dell'8% e ricentrato sul canvas: nel ritaglio
+    desktop le card restano staccate dai bordi invece di arrivare a filo.
+    Il fondo (pattern e macchie) resta fuori, cosi' continua a riempire.
+  -->
+  <g transform="translate(600 300) scale(0.92) translate(-605 -300)">
+
+  <!-- ===== card grande: istogramma + linea di tendenza ===== -->
+  <g filter="url(#bi-card-shadow)">
+    <rect x="230" y="140" width="470" height="320" rx="16" fill="#FBFAF8" />
+  </g>
+
+  <!-- intestazione finta: barrette al posto del testo, cosi' non c'e' nulla da tradurre -->
+  <rect x="266" y="174" width="146" height="14" rx="7" fill="#4A4F4C" opacity="0.78" />
+  <rect x="266" y="198" width="92" height="10" rx="5" fill="#A1A499" opacity="0.85" />
+  <rect x="596" y="172" width="68" height="20" rx="10" fill="#A8C1CD" />
+
+  <!-- istogramma -->
+  <g>
+    <rect x="265" y="360" width="38" height="60" rx="5" fill="#A8C1CD" />
+    <rect x="323" y="325" width="38" height="95" rx="5" fill="#A8C1CD" />
+    <rect x="381" y="342" width="38" height="78" rx="5" fill="#A8C1CD" />
+    <rect x="439" y="290" width="38" height="130" rx="5" fill="#A8C1CD" />
+    <rect x="497" y="310" width="38" height="110" rx="5" fill="#A8C1CD" />
+    <rect x="555" y="270" width="38" height="150" rx="5" fill="#BFA89E" />
+    <rect x="613" y="282" width="38" height="138" rx="5" fill="#A8C1CD" />
+  </g>
+
+  <!-- asse -->
+  <line x1="265" y1="420" x2="665" y2="420" stroke="#A1A499" stroke-width="2" opacity="0.6" />
+
+  <!-- linea di tendenza -->
+  <path
+    d="M284 350 C313 350 313 320 342 320 C371 320 371 335 400 335 C429 335 429 280 458 280 C487 280 487 300 516 300 C545 300 545 240 574 240 C603 240 603 230 632 230"
+    fill="none" stroke="#5B879B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <g fill="#FBFAF8" stroke="#5B879B" stroke-width="3">
+    <circle cx="284" cy="350" r="5" />
+    <circle cx="400" cy="335" r="5" />
+    <circle cx="516" cy="300" r="5" />
+    <circle cx="632" cy="230" r="5" />
+  </g>
+
+  <!-- ===== card in alto a destra: grafico ad anello ===== -->
+  <g filter="url(#bi-card-shadow)">
+    <rect x="730" y="140" width="250" height="150" rx="16" fill="#FBFAF8" />
+  </g>
+
+  <!-- anello: circonferenza 2*pi*42 = 263.89, spezzata in 45% / 30% / 25% -->
+  <g transform="rotate(-90 800 215)" fill="none" stroke-width="16">
+    <circle cx="800" cy="215" r="42" stroke="#5B879B" stroke-dasharray="118.75 145.14" />
+    <circle cx="800" cy="215" r="42" stroke="#BFA89E" stroke-dasharray="79.17 184.72" stroke-dashoffset="-118.75" />
+    <circle cx="800" cy="215" r="42" stroke="#A1A499" stroke-dasharray="65.97 197.92" stroke-dashoffset="-197.92" />
+  </g>
+
+  <!-- legenda -->
+  <g>
+    <circle cx="877" cy="187" r="5" fill="#5B879B" />
+    <rect x="891" y="183" width="58" height="8" rx="4" fill="#4A4F4C" opacity="0.5" />
+    <circle cx="877" cy="215" r="5" fill="#BFA89E" />
+    <rect x="891" y="211" width="44" height="8" rx="4" fill="#4A4F4C" opacity="0.5" />
+    <circle cx="877" cy="243" r="5" fill="#A1A499" />
+    <rect x="891" y="239" width="52" height="8" rx="4" fill="#4A4F4C" opacity="0.5" />
+  </g>
+
+  <!-- ===== card in basso a destra: KPI + sparkline ===== -->
+  <g filter="url(#bi-card-shadow)">
+    <rect x="730" y="310" width="250" height="150" rx="16" fill="#FBFAF8" />
+  </g>
+
+  <rect x="762" y="342" width="104" height="24" rx="6" fill="#4A4F4C" opacity="0.8" />
+  <rect x="762" y="378" width="66" height="10" rx="5" fill="#A1A499" />
+
+  <!-- freccia di crescita -->
+  <path d="M886 358 L898 340 L910 358 Z" fill="#5B879B" />
+
+  <path d="M762 432 C790 432 794 414 818 414 C842 414 846 424 870 424 C894 424 900 400 948 396"
+    fill="none" stroke="#BFA89E" stroke-width="4" stroke-linecap="round" />
+  </g>
+</svg>
