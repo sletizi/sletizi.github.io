@@ -30,7 +30,7 @@
               outlined
               large
               class="scroll-down"
-              aria-label="Vai al contenuto"
+              :aria-label="$t('hero.scrollDown')"
               @click="$vuetify.goTo('#about-me')"
               :class="{ 'at-bottom': movedToBottom }"
             >

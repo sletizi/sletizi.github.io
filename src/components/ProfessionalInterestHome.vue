@@ -1,6 +1,6 @@
 <template>
  <v-container>
-          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">INTERESSI PROFESSIONALI<!--PROFESSIONAL INTERESTS --></h2>
+          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">{{ $t('interests.title') }}</h2>
 
           <v-responsive
             class="mx-auto mb-12"
@@ -13,13 +13,14 @@
 
           <v-row>
             <v-col
-              v-for="({ icon, text, title }, i) in interests"
+              v-for="({ icon, title, alt }, i) in interests"
               :key="i"
               cols="12"
               md="4"
             >
               <v-img
                 :src="icon"
+                :alt="alt"
                 class="mb-4"
                 height="275"
                 max-width="100%"
@@ -51,26 +52,38 @@
 <script>
 import { sanitizeHtml } from '@/utils/sanitizeHtml';
 
+// Illustrazioni originali, disegnate a mano in SVG: stessa palette del sito,
+// stessa griglia (contenuto dentro x 230-980 / y 140-460, che e' la zona che
+// sopravvive a entrambi i ritagli di v-img) e nessun testo, cosi' non c'e'
+// nulla da tradurre al cambio di lingua. Niente materiale di terzi, quindi
+// niente questioni di licenza.
+const IMAGES = {
+    businessIntelligence: require('@/assets/interests/business-intelligence.svg'),
+    dataEngineering: require('@/assets/interests/data-engineering.svg'),
+    teaching: require('@/assets/interests/teaching.svg'),
+}
+
 export default {
-    data() {
-        return {
-            interests: [
-            {
-                icon: 'https://www.projest.com/wp-content/uploads/2024/09/Software-di-business-intelligence-1024x683.jpg',
-                title: 'Business <br/> Intelligence',
-                text: 'Da riempire',
-            },
-            {
-                icon: 'https://images.ctfassets.net/jozd1x4pyd20/sIlTd891FLdPQJkJH50wW/412505a72e3793f2e6c3dea7142c4308/DataPlatform-300523.jpg',
-                title: 'Data <br/> Engineering',
-                text: 'Da riempire',
-            },
-            {
-                icon: 'https://faithandleadership.com/sites/default/files/field/image/DavidSmith-teaching_m.png',
-                title: 'Insegnamento<br/> & <br/> didattica',
-                text: 'Da riempire',
-            },
-          ]
+    computed: {
+        // computed e non data: i titoli devono seguire il toggle di lingua
+        interests() {
+            return [
+                {
+                    icon: IMAGES.businessIntelligence,
+                    title: this.$t('interests.businessIntelligence'),
+                    alt: this.$t('interests.alt.businessIntelligence'),
+                },
+                {
+                    icon: IMAGES.dataEngineering,
+                    title: this.$t('interests.dataEngineering'),
+                    alt: this.$t('interests.alt.dataEngineering'),
+                },
+                {
+                    icon: IMAGES.teaching,
+                    title: this.$t('interests.teaching'),
+                    alt: this.$t('interests.alt.teaching'),
+                },
+            ]
         }
     },
     methods: {

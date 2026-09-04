@@ -19,7 +19,12 @@
     <v-row align="center" justify="center">
       <v-col align="center" cols="12" md="6">
         <h1 class="text-center">{{ selectedProject.name }}</h1>
-        <v-btn class="text-center ma-3" :href="selectedProject.github" icon>
+        <v-btn
+          class="text-center ma-3"
+          :href="selectedProject.github"
+          :aria-label="$t('projectsPage.repository', { name: selectedProject.name })"
+          icon
+        >
           <v-icon size="40px">mdi-github</v-icon>
         </v-btn>
       </v-col>
@@ -36,7 +41,7 @@
     </v-row>
 
     <!-- DESCRIZIONE --------------------------------------------------- -->
-    <p class="ma-4 pa-4"><span v-html="sanitizeHtml(selectedProject.description)"></span></p>
+    <p class="ma-4 pa-4"><span v-html="sanitizeHtml($t('projects.' + selectedProject.id + '.description'))"></span></p>
 
     <!-- COLLABORATORI -------------------------------------------------- -->
     <p
@@ -44,7 +49,7 @@
       class="mx-4 px-4 grey--text text--darken-1"
     >
       <v-icon small class="mr-1">mdi-account-group</v-icon>
-      Realizzato insieme a: {{ selectedProject.collaborators.join(', ') }}
+      {{ $t('projectsPage.collaborators', { names: selectedProject.collaborators.join(', ') }) }}
     </p>
 
     <!-- TAG TECNOLOGIE ------------------------------------------------ -->
@@ -81,7 +86,7 @@
 
     <!-- 📄 PDF VIEWER (solo se non è la guida) ------------------------ -->
     <h2 v-if="hasPdf && !isPowerBIGuide"
-        class="text-center ma-4">Report</h2>
+        class="text-center ma-4">{{ $t('projectsPage.report') }}</h2>
 
     <v-row
       v-if="hasPdf && !isPowerBIGuide"
@@ -123,8 +128,8 @@
       <v-btn small class="ma-4" @click="page--" :disabled="page <= 1">-</v-btn>
 
       <v-text-field
-        :value="`${page} di ${numPages}`"
-        label="Numero pagina"
+        :value="$t('projectsPage.pageOf', { page, total: numPages })"
+        :label="$t('projectsPage.pageNumberLabel')"
         readonly
         style="max-width:200px"
       />
@@ -140,7 +145,7 @@
         <iframe
           src="https://sletizi.github.io/PowerBiGuide/"
           style="border:0;width:100%;height:80vh;"
-          title="Power BI Guide"
+          :title="$t('projectsPage.guideTitle')"
         ></iframe>
       </v-col>
     </v-row>
@@ -152,13 +157,15 @@ import projectsData from "@/data/projects.json";
 import { sanitizeHtml } from "@/utils/sanitizeHtml";
 
 export default {
-  metaInfo: {
-    title: 'Progetti',
-    meta: [{
-      vmid: 'description',
-      name: 'description',
-      content: "I progetti di Simone Letizi: data analytics, Power BI, app mobile e big data, con report e screenshot."
-    }]
+  metaInfo() {
+    return {
+      title: this.$t('meta.projects.title'),
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.$t('meta.projects.description')
+      }]
+    }
   },
 
   // pdf.js pesa piu' di 1 MB: viene scaricato solo quando si apre
@@ -187,7 +194,7 @@ export default {
       return Boolean(this.selectedProject.pdf);
     },
     isPowerBIGuide() {
-      return this.selectedProject.name === "Power BI Guide";
+      return this.selectedProject.id === "powerbi-guide";
     },
     pdfSource() {
       if (!this.hasPdf) {

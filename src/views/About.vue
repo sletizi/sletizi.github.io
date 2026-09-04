@@ -1,7 +1,7 @@
 <template>
     <v-content align="center">
           <personal-info class="mb-4"/>
-          <custom-button class="ma-4" link="https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing" buttonText="VAI AL MIO CV"/>
+          <custom-button class="ma-4" link="https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing" :buttonText="$t('about.cvButton')"/>
           <career/>
           <tech-skills/> 
           <certifications/>   
@@ -20,13 +20,15 @@ import CustomButton from '../components/CustomButton'
 import Certifications from '../components/Certifications'
 
 export default{
-    metaInfo: {
-        title: 'Su di me',
-        meta: [{
-            vmid: 'description',
-            name: 'description',
-            content: "Il percorso di Simone Letizi fra dati e insegnamento, le competenze tecniche, le certificazioni e la vita fuori dallo schermo."
-        }]
+    metaInfo() {
+        return {
+            title: this.$t('meta.about.title'),
+            meta: [{
+                vmid: 'description',
+                name: 'description',
+                content: this.$t('meta.about.description')
+            }]
+        }
     },
     components : {
         'personal-info' : PersonalInfo,

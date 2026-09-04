@@ -1,6 +1,6 @@
 <template>
      <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3"> PROGETTI RECENTI </h2>
+          <h2 class="display-2 font-weight-bold mb-3 text-uppercase">{{ $t('projectsSection.title') }}</h2>
 
           <v-responsive
             class="mx-auto mb-12"
@@ -41,12 +41,12 @@
                 </v-card-title>
 
                 <v-card-subtitle>
-                  Tecnologie e ambito principale: {{ project.tech_description }}
+                  {{ $t('projectsSection.techLabel', { tech: $t('projects.' + project.id + '.techDescription') }) }}
                 </v-card-subtitle>
 
                 <v-card-text
                   class="subtitle-1 flex-grow-1"
-                  v-html="sanitizeHtml(project.short_description)"
+                  v-html="sanitizeHtml($t('projects.' + project.id + '.shortDescription'))"
                 ></v-card-text>
 
                 <div
@@ -54,7 +54,7 @@
                   class="caption grey--text text--darken-1 px-4 pb-3"
                 >
                   <v-icon x-small class="mr-1">mdi-account-group</v-icon>
-                  Con {{ project.collaborators.join(', ') }}
+                  {{ $t('projectsSection.collaborators', { names: project.collaborators.join(', ') }) }}
                 </div>
 
                 <v-card-actions class="justify-center pb-8">
@@ -82,7 +82,7 @@
                 large
             >
                 <span class="grey--text text--darken-1 font-weight-bold">
-                  Visualizza tutti i progetti
+                  {{ $t('projectsSection.cta') }}
                 </span>
             </v-btn>
         </v-container>
@@ -92,15 +92,16 @@
 import projectsData from '@/data/projects.json';
 import { sanitizeHtml } from '@/utils/sanitizeHtml';
 
-// I progetti da mettere in vetrina sulla home: i dati (testo, logo, repo)
-// arrivano da projects.json, cosi' restano allineati alla pagina Progetti.
-const IN_VETRINA = ['SpotiStats', 'Scanbage'];
+// I progetti da mettere in vetrina sulla home: la struttura (logo, repo)
+// arriva da projects.json e i testi dalle traduzioni, cosi' restano
+// allineati alla pagina Progetti.
+const IN_VETRINA = ['spotistats', 'scanbage'];
 
 export default {
     computed: {
         projects() {
             return IN_VETRINA
-                .map(name => projectsData.find(project => project.name === name))
+                .map(id => projectsData.find(project => project.id === id))
                 .filter(Boolean)
         }
     },
@@ -116,7 +117,9 @@ export default {
             return this.isGitlab(url) ? 'mdi-gitlab' : 'mdi-github'
         },
         repoLabel(url) {
-            return this.isGitlab(url) ? 'Vedi su GitLab' : 'Vedi su GitHub'
+            return this.isGitlab(url)
+                ? this.$t('projectsSection.viewOnGitLab')
+                : this.$t('projectsSection.viewOnGitHub')
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">CERTIFICAZIONI </h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">{{ $t('certifications.title') }}</h2>
 
           <v-responsive
             class="mx-auto mb-12"

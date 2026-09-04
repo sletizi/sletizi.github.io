@@ -1,86 +1,74 @@
-[ 
+[
     {
-        "title":"⛰️ ⛺ 🔥",
+        "id":"monte-nerone",
         "place":"Monte Nerone 1.525 m",
         "date":"08/2021",
-        "name":"44-2.webp",
-        "description":"AAAA"
+        "name":"44-2.webp"
     },
     {
-        "title":"🚴‍♂️",
+        "id":"molveno-bike",
         "place":"Molveno",
         "date":"05/2021",
-        "name":"49-2.webp",
-        "description":"AAAA"
+        "name":"49-2.webp"
     },
     {
-        "title":"🎾",
+        "id":"molveno-tennis",
         "place":"Molveno",
         "date":"05/2021",
-        "name":"48-2.webp",
-        "description":"AAAA"
+        "name":"48-2.webp"
     },
     {
-        "title":"🎒🚶",
+        "id":"monte-catria-hike",
         "place":"Monte Catria",
         "date":"08/2021",
-        "name":"45-2.webp",
-        "description":"AAAA"
+        "name":"45-2.webp"
     },
     {
-        "title":"Ciaspolata 🗻 ❄️",
+        "id":"monte-catria-snow",
         "place":"Monte Catria",
         "date":"12/2021",
-        "name":"47-2.webp",
-        "description":"AAAA"
+        "name":"47-2.webp"
     },
     {
-        "title":"🏍️",
+        "id":"monte-cucco",
         "place":"Monte Cucco",
         "date":"09/2021",
-        "name":"46-2.webp",
-        "description":"AAAA"
+        "name":"46-2.webp"
     },
     {
-        "title":"Famiglia &#127891 👨‍👩‍👧‍👦",
+        "id":"famiglia",
         "place":"Cesena",
         "date":"07/2018",
-        "name":"00.webp",
-        "description":"AAAA"
+        "name":"00.webp"
     },
     {
-        "title":"Amici 🥂",
+        "id":"amici",
         "place":"Rimini",
         "date":"02/2020",
-        "name":"01.webp",
-        "description":"AAAA"
+        "name":"01.webp"
     },
     {
-        "title":"Per aria ☀ ",
+        "id":"per-aria",
         "place":"Fano",
         "date":"09/2018",
-        "name":"21.webp",
-        "description":"AAAA"
+        "name":"21.webp"
     },
     {
-        "title":"Calcio a 5 - Alma Juventus Fano ⚽",
+        "id":"calcio-a-5",
         "place":"Pesaro",
         "date":"04/2014",
-        "name":"31.webp",
-        "description":"AAAA"
+        "name":"31.webp"
     },
     {
-        "title":"Volare.... &#x1FA82 ",
+        "id":"volare",
         "place":"Fano",
         "date":"09/2018",
-        "name":"32.webp",
-        "description":"AAAA"
+        "name":"32.webp"
     },
     {
-        "title":"Adrenalina 🤩",
+        "id":"adrenalina",
         "place":"Fano",
         "date":"09/2018",
-        "name":"42.webp",
-        "description":"AAAA"
+        "name":"42.webp"
     }
 ]

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+  <!--
+    Insegnamento & didattica - illustrazione originale, stessa palette e stesse
+    regole delle altre due: contenuto dentro x 230-980 / y 140-460, che e' la
+    zona che sopravvive a entrambi i ritagli di v-img; il fondo resta fuori dal
+    gruppo, cosi' e' libero di riempire i bordi.
+
+    Dieci studenti su due file. La lavagna e' bassa e larga per liberare la
+    fascia in basso. La fila davanti e' sfalsata di mezzo passo rispetto a
+    quella dietro: le teste cadono nei vuoti fra un busto e l'altro invece di
+    sovrapporsi, che era il problema della prima versione. La profondita' la
+    danno le tre differenze fra le file - dimensione, opacita' e ordine di
+    disegno - non una prospettiva vera.
+
+    Figure stilizzate e senza volto: nessuna persona reale, nessun testo da
+    tradurre al cambio di lingua.
+  -->
+  <defs>
+    <pattern id="te-dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.8" fill="#A1A499" opacity="0.28" />
+    </pattern>
+
+    <filter id="te-card-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#4A4F4C" flood-opacity="0.13" />
+    </filter>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1200" height="600" fill="#DAD6CC" />
+  <rect width="1200" height="600" fill="url(#te-dots)" />
+  <circle cx="86" cy="300" r="160" fill="#5B879B" opacity="0.10" />
+  <circle cx="1122" cy="168" r="128" fill="#BFA89E" opacity="0.22" />
+  <circle cx="1080" cy="486" r="74" fill="#5B879B" opacity="0.12" />
+
+  <g transform="translate(600 300) scale(0.92) translate(-605 -300)">
+
+    <!-- ===== lavagna ===== -->
+    <g filter="url(#te-card-shadow)">
+      <rect x="406" y="140" width="478" height="180" rx="14" fill="#FBFAF8" />
+    </g>
+    <rect x="398" y="322" width="494" height="12" rx="6" fill="#A1A499" opacity="0.45" />
+
+    <!-- appunti: barrette al posto del testo -->
+    <rect x="446" y="174" width="196" height="12" rx="6" fill="#4A4F4C" opacity="0.68" />
+    <rect x="446" y="200" width="140" height="9" rx="4.5" fill="#A1A499" />
+    <rect x="446" y="222" width="168" height="9" rx="4.5" fill="#A1A499" opacity="0.75" />
+    <rect x="446" y="244" width="116" height="9" rx="4.5" fill="#A1A499" opacity="0.6" />
+
+    <!-- mappa concettuale -->
+    <g fill="none" stroke="#5B879B" stroke-width="3" opacity="0.6">
+      <path d="M740 188 L818 226" />
+      <path d="M818 226 L752 272" />
+    </g>
+    <circle cx="740" cy="188" r="15" fill="#A8C1CD" />
+    <circle cx="818" cy="226" r="15" fill="#BFA89E" />
+    <circle cx="752" cy="272" r="15" fill="#5B879B" />
+
+    <!-- ===== docente ===== -->
+    <path d="M321 280 L374 248" stroke="#5B879B" stroke-width="15" stroke-linecap="round" fill="none" />
+    <rect x="259" y="256" width="66" height="140" rx="31" fill="#5B879B" />
+    <circle cx="292" cy="222" r="27" fill="#BFA89E" />
+    <circle cx="378" cy="246" r="8" fill="#BFA89E" />
+
+    <!-- ===== fila dietro: cinque, piu' piccoli e smorzati ===== -->
+    <g opacity="0.7">
+      <rect x="418" y="356" width="60" height="30" rx="15" fill="#A8C1CD" />
+      <circle cx="448" cy="338" r="16" fill="#BFA89E" />
+
+      <rect x="516" y="356" width="60" height="30" rx="15" fill="#A1A499" />
+      <circle cx="546" cy="338" r="16" fill="#BFA89E" />
+
+      <rect x="614" y="356" width="60" height="30" rx="15" fill="#A8C1CD" />
+      <circle cx="644" cy="338" r="16" fill="#BFA89E" />
+
+      <rect x="712" y="356" width="60" height="30" rx="15" fill="#A1A499" />
+      <circle cx="742" cy="338" r="16" fill="#BFA89E" />
+
+      <rect x="810" y="356" width="60" height="30" rx="15" fill="#A8C1CD" />
+      <circle cx="840" cy="338" r="16" fill="#BFA89E" />
+    </g>
+
+    <!-- ===== fila davanti: cinque, sfalsati di mezzo passo ===== -->
+    <rect x="455" y="426" width="84" height="34" rx="17" fill="#5B879B" />
+    <circle cx="497" cy="402" r="22" fill="#BFA89E" />
+
+    <rect x="553" y="426" width="84" height="34" rx="17" fill="#4A4F4C" opacity="0.6" />
+    <circle cx="595" cy="402" r="22" fill="#BFA89E" />
+
+    <rect x="651" y="426" width="84" height="34" rx="17" fill="#A1A499" />
+    <circle cx="693" cy="402" r="22" fill="#BFA89E" />
+
+    <rect x="749" y="426" width="84" height="34" rx="17" fill="#A8C1CD" />
+    <circle cx="791" cy="402" r="22" fill="#BFA89E" />
+
+    <rect x="847" y="426" width="84" height="34" rx="17" fill="#5B879B" />
+    <circle cx="889" cy="402" r="22" fill="#BFA89E" />
+  </g>
+</svg>
