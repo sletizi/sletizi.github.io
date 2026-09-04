@@ -10,7 +10,7 @@
       tile
     >
       <v-card-title class="" color="black">
-        <strong class="subheading">Connettiti con me sui social network<!--Get connected with me on social networks!--></strong>
+        <strong class="subheading">{{ $t('footer.social') }}</strong>
 
         <v-spacer></v-spacer>
 
@@ -27,7 +27,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Made by myself with Vue.js and Vuetify<!--Made by myself with Vue.js and Vuetify--></strong>
+        {{ new Date().getFullYear() }} — <strong>{{ $t('footer.madeBy') }}</strong>
       </v-card-text>
     </v-card>
   </v-footer>

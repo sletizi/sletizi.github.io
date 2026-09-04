@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="pr-6 ps-6 me-6">
-      <h2 class="display-2 font-weight-bold mb-3">LA MIA VITA</h2>
-      <h3 class="mb-3">Non solo programmazione</h3>
+      <h2 class="display-2 font-weight-bold mb-3 text-uppercase">{{ $t('myLife.title') }}</h2>
+      <h3 class="mb-3">{{ $t('myLife.subtitle') }}</h3>
   
       <v-responsive class="mx-auto mb-6" width="56">
         <v-divider class="mb-1"></v-divider>
@@ -10,8 +10,8 @@
   
       <v-row>
         <v-col
-          v-for="(pic, index) in imported_pictures"
-          :key="index"
+          v-for="pic in imported_pictures"
+          :key="pic.id"
           md="3"
           sm="6"
           xs="6"
@@ -32,7 +32,7 @@
                 height="100%"
               />
             </v-container>
-            <v-card-title v-html="sanitizeHtml(pic.title)" class="justify-center"></v-card-title>
+            <v-card-title v-html="sanitizeHtml($t('myLife.pictures.' + pic.id))" class="justify-center"></v-card-title>
             <v-card-title v-html="sanitizeHtml(`${pic.place} - ${pic.date}`)" class="justify-center"></v-card-title>
           </v-card>
         </v-col>
