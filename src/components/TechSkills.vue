@@ -15,17 +15,12 @@
             align="center"
             justify="center">
 
-            <!-- SINISTRA: loghi recenti, e sotto la sfera dei tag -->
+            <!-- SINISTRA: loghi delle tecnologie, e sotto la sfera dei tag -->
             <v-col
                 cols="12"
                 md="6"
                 xs="12">
                 <v-container>
-                    <v-divider></v-divider>
-                        Utilizzati di recente
-                        <v-icon class="mx-4">mdi-star</v-icon>
-                    <v-divider></v-divider>
-
                     <v-row justify="center">
                         <v-col
                             align="center"

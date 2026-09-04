@@ -38,6 +38,15 @@
     <!-- DESCRIZIONE --------------------------------------------------- -->
     <p class="ma-4 pa-4"><span v-html="sanitizeHtml(selectedProject.description)"></span></p>
 
+    <!-- COLLABORATORI -------------------------------------------------- -->
+    <p
+      v-if="selectedProject.collaborators && selectedProject.collaborators.length"
+      class="mx-4 px-4 grey--text text--darken-1"
+    >
+      <v-icon small class="mr-1">mdi-account-group</v-icon>
+      Realizzato insieme a: {{ selectedProject.collaborators.join(', ') }}
+    </p>
+
     <!-- TAG TECNOLOGIE ------------------------------------------------ -->
     <v-row align="center" justify="center" class="ma-3">
       <v-btn
