@@ -131,7 +131,12 @@ jobs:
         run: npm run build
 
       - name: Copy CV PDF into build output
-        run: cp cv.pdf dist/cv.pdf
+        run: |
+          if [ -f cv.pdf ]; then
+            cp cv.pdf dist/cv.pdf
+          else
+            echo "cv.pdf not present in repo root, skipping."
+          fi
 
       - name: Create 404 fallback
         run: cp dist/index.html dist/404.html
