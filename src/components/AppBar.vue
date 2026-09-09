@@ -102,7 +102,7 @@ export default {
         {
           icon: "mdi-file-account",
           title: this.$t('nav.cv'),
-          href: "https://drive.google.com/file/d/1kr6Z4y7s8rjbrjvNc6rWa16q1ZhXnbTB/view?usp=sharing",
+          href: "https://sletizi.github.io/cv.pdf",
           target: "_blank",
           rel: "noopener noreferrer"
         },
